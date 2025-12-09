@@ -1,0 +1,526 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% load static mymath %}
+
+<style>
+  :root {
+    --primary: #2a9d8f;
+    --primary-dark: #21867a;
+    --secondary: #e9c46a;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow: 0 4px 12px -3px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 28px 0 rgba(0,0,0,0.12);
+    --rounded: 0.5rem;
+    --rounded-lg: 0.75rem;
+    --rounded-xl: 1rem;
+  }
+
+  /* Typography */
+  .section-title {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  @media (max-width: 768px) {
+    .section-title { font-size: 1.75rem; }
+  }
+
+  .hero-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .hero-title .text-highlight {
+    color: var(--primary);
+  }
+  .hero-text {
+    opacity: 0.9;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  /* Buttons */
+  .btn-get-started {
+    background: var(--primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: var(--rounded);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  .btn-get-started:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(42, 157, 143, 0.25);
+  }
+
+  .readmore {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+  .readmore:hover {
+    color: var(--primary-dark);
+  }
+
+  /* Cards & Items */
+  .card-item, .service-item, .portfolio-content {
+    border: none;
+    border-radius: var(--rounded-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  .card-item:hover,
+  .service-item:hover,
+  .portfolio-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+  }
+  .card-bg {
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+  }
+  .service-item {
+    padding: 1.5rem !important;
+  }
+
+  /* Tabs */
+  .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    color: #444;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    margin: 0 0.25rem;
+    border-radius: var(--rounded) var(--rounded) 0 0;
+    transition: var(--transition);
+  }
+  .nav-tabs .nav-link.active {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  .projects .nav-link {
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0.375rem;
+    margin: 0 0.125rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+  }
+  .projects .nav-link.active {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  /* Animation System */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hover Lift Effect */
+  .hover-lift {
+    transition: var(--transition);
+  }
+  .hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Breadcrumbs */
+  .breadcrumbs {
+    padding: 6rem 0;
+  }
+  @media (max-width: 768px) {
+    .breadcrumbs { padding: 4rem 0; }
+  }
+</style>
+
+<!-- ======= Hero Section ======= -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'assets/img/breadcrumbs-bg.jpg' %}');">
+  <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+    <h2 class="animate-on-scroll" data-delay="0">Services & Products</h2>
+    <ol class="d-flex justify-content-center animate-on-scroll" data-delay="100">
+      <li><a href="{% url 'home:home' %}">Home</a></li>
+      <li>Our Services</li>
+    </ol>
+  </div>
+</div>
+<!-- End Hero Section -->
+
+<!-- ======= Core Services Section ======= -->
+<section id="core-services" class="services section-bg py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5 animate-on-scroll" data-delay="0">
+      <h2 class="section-title mb-3">Core Services</h2>
+      <p class="mb-0">
+        Integrated engineering, construction, and support services — from design to long-term operation.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Service 1: Reverse Osmosis & Desalination -->
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="0">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white hover-lift">
+          <div class="icon-wrapper mb-4 mx-auto text-center">
+            <img src="{% static 'assets/img/features-4.jpg' %}" 
+                 alt="RO & Desalination" 
+                 class="img-fluid rounded">
+          </div>
+
+          <h4 class="text-center mb-3">Reverse Osmosis & Desalination</h4>
+          <p class="mb-0 flex-grow-1">
+            Complete RO plants from 700 m³/day (EBIC) to large-scale municipal systems (Polatlı: 28,800 m³/day). Joint ventures with Aritim (CARETTA® technology).
+          </p>
+          <a href="{% url 'services:service_detail'%}" class="readmore mt-3 text-center">Learn more <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Service 2: Water & Wastewater Treatment -->
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="100">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white hover-lift">
+          <div class="icon-wrapper mb-4 mx-auto text-center">
+            <img src="{% static 'assets/img/features-2.jpg' %}" 
+                 alt="Water Treatment" 
+                 class="img-fluid rounded">
+          </div>
+
+          <h4 class="text-center mb-3">Water & Wastewater Treatment</h4>
+          <p class="mb-0 flex-grow-1">
+            Sand filtration, softening, demineralization, and biological treatment. Projects include Elgarhy Steel rehabilitation, Guardian Glass ESP isolation.
+          </p>
+          <a href="{% url 'services:service_detail'%}" class="readmore mt-3 text-center">Learn more <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <!-- Service 3: Cooling & Mechanical Systems -->
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="200">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white hover-lift">
+          <div class="icon-wrapper mb-4 mx-auto text-center">
+            <img src="{% static 'assets/img/constructions-2.jpg' %}" 
+                 alt="Cooling Systems" 
+                 class="img-fluid rounded">
+          </div>
+
+          <h4 class="text-center mb-3">Cooling & Mechanical Systems</h4>
+          <p class="mb-0 flex-grow-1">
+            Cooling tower fill & drift eliminators (Vinavil, Semadco), complete cooling systems (Abo Zaabal Steel: 400 m³/hr), steel structures (EFC RO Plant).
+          </p>
+          <a href="{% url 'services:service_detail'%}" class="readmore mt-3 text-center">Learn more <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Core Services Section -->
+
+<!-- ======= Products & Systems Section ======= -->
+<section id="products-systems" class="constructions section-bg py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5 animate-on-scroll" data-delay="0">
+      <h2 class="section-title mb-3">Products & Systems</h2>
+      <p class="mb-0">Advanced technologies for water treatment, reuse, and industrial process support — engineered for reliability and efficiency.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Water Treatment Systems -->
+      <div class="col-lg-6 animate-on-scroll" data-delay="100">
+        <div class="card-item h-100 hover-lift">
+          <div class="row g-0">
+            <div class="col-xl-5">
+              <div class="card-bg rounded-start" style="background-image: url({% static 'assets/img/p7.jpg' %});"></div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-center">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">💧 Water Treatment Systems</h4>
+                <ul class="mb-0">
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Sand & Activated Carbon Filtration</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Iron/Manganese Removal</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Softening & Demineralization (Ion Exchange)</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Ultra/Pure Water for Pharma & Power</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wastewater & Reuse -->
+      <div class="col-lg-6 animate-on-scroll" data-delay="200">
+        <div class="card-item h-100 hover-lift">
+          <div class="row g-0">
+            <div class="col-xl-5">
+              <div class="card-bg rounded-start" style="background-image: url({% static 'assets/img/p6.jpg' %});"></div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-center">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">♻️ Wastewater & Reuse</h4>
+                <ul class="mb-0">
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> BIOTREATMENT® Package Plants (YK/P)</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Biological (Activated Sludge), Chemical, Physical</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> RO + UF for Textile/Metal Recycling</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Zero Liquid Discharge (ZLD) Feasibility</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Membrane & RO Systems -->
+      <div class="col-lg-6 animate-on-scroll" data-delay="300">
+        <div class="card-item h-100 hover-lift">
+          <div class="row g-0">
+            <div class="col-xl-5">
+              <div class="card-bg rounded-start" style="background-image: url({% static 'assets/img/features-2.jpg' %});"></div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-center">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">🌊 Membrane Technologies</h4>
+                <ul class="mb-0">
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Reverse Osmosis (RO) – Brackish & Seawater</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Nanofiltration (NF), Ultrafiltration (UF)</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Energy Recovery for SWRO</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> CARETTA® Patented Systems (Aritim)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cooling & Fill Tech -->
+      <div class="col-lg-6 animate-on-scroll" data-delay="400">
+        <div class="card-item h-100 hover-lift">
+          <div class="row g-0">
+            <div class="col-xl-5">
+              <div class="card-bg rounded-start" style="background-image: url({% static 'assets/img/p8.jpg' %});"></div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-center">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">🌬️ Cooling Tower Solutions (Fill Tech)</h4>
+                <ul class="mb-0">
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Fill Packing (Film & Splash Types)</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Drift Eliminators (High-Efficiency)</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Distribution Systems & Nozzles</li>
+                  <li><i class="bi bi-check-circle-fill text-success me-1"></i> Full Rehabilitation & Upgrades</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Products & Systems Section -->
+
+<!-- ======= Represented Partners Section ======= -->
+<section id="partners" class="alt-services py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5 animate-on-scroll" data-delay="0">
+      <h2 class="section-title mb-3">Our Technology Partners</h2>
+      <p class="mb-0">Green Zag is the official representative in Egypt for leading international manufacturers.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Aritim -->
+      <div class="col-lg-4 animate-on-scroll" data-delay="100">
+        <div class="card h-100 border-0 shadow-sm rounded-3 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-light p-2 rounded me-3">
+                <i class="fa-solid fa-water fs-3 text-primary"></i>
+              </div>
+              <h5 class="mb-0">Aritim (Turkey)</h5>
+            </div>
+            <p>20+ years — 600+ plants worldwide.<br>
+            Patented <strong>CARETTA®</strong> systems.<br>
+            Specialized in municipal & industrial water/wastewater treatment.</p>
+            <a href="" class="readmore">
+              View Profile <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RDM (Demir Metal) -->
+      <div class="col-lg-4 animate-on-scroll" data-delay="200">
+        <div class="card h-100 border-0 shadow-sm rounded-3 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-light p-2 rounded me-3">
+                <i class="fa-solid fa-industry fs-3 text-primary"></i>
+              </div>
+              <h5 class="mb-0">RDM Makina (Demir Metal)</h5>
+            </div>
+            <p>50+ years in heavy industry.<br>
+            ISO 9001, EN 3834-2 certified.<br>
+            Steel structures, pressure vessels, piping, turnkey fabrication.</p>
+            <a href="" class="readmore">
+              View Profile <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fill Tech -->
+      <div class="col-lg-4 animate-on-scroll" data-delay="300">
+        <div class="card h-100 border-0 shadow-sm rounded-3 hover-lift">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <div class="bg-light p-2 rounded me-3">
+                <i class="fa-solid fa-fan fs-3 text-primary"></i>
+              </div>
+              <h5 class="mb-0">Fill Tech</h5>
+            </div>
+            <p>Cooling tower specialist.<br>
+            High-efficiency fill, drift eliminators & distribution systems.<br>
+            Custom design & OEM support.</p>
+            <a href="" class="readmore">
+              View Profile <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Partners Section -->
+
+<!-- ======= Featured Projects Section ======= -->
+<section id="featured-projects" class="projects py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5 animate-on-scroll" data-delay="0">
+      <h2 class="section-title mb-3">Featured Projects</h2>
+      <p class="mb-0">Real-world implementations across sectors — many delivered in joint ventures with our partners.</p>
+    </div>
+
+    <ul class="nav nav-tabs row g-2 d-flex justify-content-center mb-4" role="tablist">
+      <li class="nav-item col-4 col-md-2">
+        <button class="nav-link active show w-100" data-bs-toggle="tab" data-bs-target="#proj-all">All</button>
+      </li>
+      <li class="nav-item col-4 col-md-3">
+        <button class="nav-link w-100" data-bs-toggle="tab" data-bs-target="#proj-aritim">With Aritim</button>
+      </li>
+      <li class="nav-item col-4 col-md-3">
+        <button class="nav-link w-100" data-bs-toggle="tab" data-bs-target="#proj-rdm">With RDM</button>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- All Projects -->
+      <div class="tab-pane fade show active" id="proj-all">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="0">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0 hover-lift">
+              <img src="{% static 'assets/img/projects/design-1.jpg' %}" class="card-img-top" alt="EBIC – RO Plant">
+              <div class="card-body p-4">
+                <span class="badge bg-primary mb-2">Aritim JV</span>
+                <h5 class="card-title">EBIC – RO Plant (700 m³/day)</h5>
+                <p class="card-text">Turnkey RO desalination for industrial use.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="100">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0 hover-lift">
+              <img src="{% static 'assets/img/projects/construction-3.jpg' %}" class="card-img-top" alt="Abo Zaabal – Cooling System">
+              <div class="card-body p-4">
+                <span class="badge bg-success mb-2">RDM Steel</span>
+                <h5 class="card-title">Abo Zaabal Steel – Cooling System (400 m³/hr)</h5>
+                <p class="card-text">Civil + mechanical + electrical works.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="200">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0 hover-lift">
+              <img src="{% static 'assets/img/projects/repairs-1.jpg' %}" class="card-img-top" alt="Semadco – Cooling Tower">
+              <div class="card-body p-4">
+                <span class="badge bg-secondary mb-2">Fill Tech</span>
+                <h5 class="card-title">Semadco – Cooling Tower System</h5>
+                <p class="card-text">Full design & installation with fill & drift elim.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- With Aritim -->
+      <div class="tab-pane fade" id="proj-aritim">
+        <div class="row g-4">
+          <div class="col-12 text-center py-4">
+            <p>✅ <strong>Semadco New RO Plant</strong> — Turnkey project, joint venture with Aritim.<br>
+            ✅ RO plants for <strong>Ebic</strong>, <strong>Attaka Power</strong>, chemical cleaning & upgrades.</p>
+            <a href="" class="btn btn-outline-primary">View All Aritim Projects</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- With RDM -->
+      <div class="tab-pane fade" id="proj-rdm">
+        <div class="row g-4">
+          <div class="col-12 text-center py-4">
+            <p>✅ Steel structures for <strong>EFC RO Plant</strong>, <strong>Ever Grow</strong> static equipment & piping.<br>
+            ✅ Heavy mechanical works for <strong>Abo Zaabal</strong>, <strong>Sinco</strong>, etc.</p>
+            <a href="" class="btn btn-outline-primary">View All RDM Collaborations</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Featured Projects Section -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = parseInt(entry.target.dataset.delay) || 0;
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, delay);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      el.classList.remove('visible');
+      observer.observe(el);
+    });
+  });
+</script>
+
+{% endblock %}

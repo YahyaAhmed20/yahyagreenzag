@@ -1,0 +1,791 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero">
+  <main id="main">
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center animate-on-scroll" data-delay="0">
+            <h2 class="hero-title">
+              Welcome to <span class="text-highlight">Green Zag</span>
+            </h2>
+            <p class="hero-text animate-on-scroll" data-delay="100">
+              A leading engineering company specialized in water and wastewater treatment,
+              turnkey industrial solutions, and advanced environmental technologies for
+              municipalities and major industries.
+            </p>
+            <a href="{% url 'about:about' %}" class="btn-get-started animate-on-scroll" data-delay="200">
+              Discover More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <div class="carousel-item active" style="background-image: url({% static 'assets/img/hero-carousel/hero-carousel-1.jpg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/p1.jpg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/p2.jpg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/hero-carousel-4.jpg' %})"></div>
+      <div class="carousel-item" style="background-image: url({% static 'assets/img/hero-carousel/hero-carousel-5.jpg' %})"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </main>
+</section>
+<!-- End Hero Section -->
+
+<!-- ======= Our Services Section ======= -->
+<section id="constructions" class="constructions section-bg py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5 animate-on-scroll" data-delay="0">
+      <h2 class="section-title mb-3">Our Services</h2>
+      <p class="mb-0">Green Zag delivers integrated engineering solutions in water treatment, industrial systems, and turnkey environmental projects with trusted global partnerships.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6 animate-on-scroll" data-delay="100">
+        <div class="card-item h-100">
+          <div class="row g-0">
+            <div class="col-xl-5">
+              <div class="card-bg rounded-start" style="background-image: url({% static 'assets/img/p3.jpg' %}); height: 100%; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-center">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">Water & Wastewater Treatment</h4>
+                <p class="mb-0">Design, supply, and installation of municipal and industrial water treatment systems, including advanced filtration and biological treatment technologies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 animate-on-scroll" data-delay="200">
+        <div class="card-item h-100">
+          <div class="row g-0">
+            <div class="col-xl-5">
+              <div class="card-bg rounded-start" style="background-image: url({% static 'assets/img/p4.jpg' %}); height: 100%; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-center">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">Reverse Osmosis (RO) Plants</h4>
+                <p class="mb-0">Engineering and construction of RO desalination units, chemical cleaning, commissioning, and full turnkey solutions for industrial and municipal sectors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 animate-on-scroll" data-delay="300">
+        <div class="card-item h-100">
+          <div class="row g-0">
+            <div class="col-xl-5">
+              <div class="card-bg rounded-start" style="background-image: url({% static 'assets/img/p5.jpg' %}); height: 100%; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-center">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">Industrial Cooling & Filtration Systems</h4>
+                <p class="mb-0">Complete installation and rehabilitation of cooling towers, filtration units, drift eliminators, and distribution systems for heavy industrial applications.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 animate-on-scroll" data-delay="400">
+        <div class="card-item h-100">
+          <div class="row g-0">
+            <div class="col-xl-5">
+              <div class="card-bg rounded-start" style="background-image: url({% static 'assets/img/p6.jpg' %}); height: 100%; background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="col-xl-7 d-flex align-items-center">
+              <div class="card-body p-4">
+                <h4 class="card-title mb-3">Mechanical & Steel Structure Works</h4>
+                <p class="mb-0">Engineering, fabrication, and installation of steel structures, piping systems, mechanical works, and on-site support for major industrial facilities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Our Services Section -->
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="services section-bg py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5 animate-on-scroll" data-delay="0">
+      <h2 class="section-title mb-3">Core Services</h2>
+      <p class="mb-0">Providing advanced engineering solutions in water treatment, industrial systems, and environmental technologies to meet the highest performance and quality standards.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="100">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white">
+          <div class="icon-wrapper mb-4 mx-auto">
+            <i class="fa-solid fa-mountain-city fs-2 text-primary"></i>
+          </div>
+          <h4 class="text-center mb-3">Water Treatment Systems</h4>
+          <p class="mb-0 flex-grow-1">Design and installation of municipal and industrial water treatment units, including filtration, clarification, and advanced purification technologies.</p>
+          <a href="{% url 'services:services' %}" class="readmore mt-3 text-center">
+            Learn more <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="200">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white">
+          <div class="icon-wrapper mb-4 mx-auto">
+            <i class="fa-solid fa-arrow-up-from-ground-water fs-2 text-primary"></i>
+          </div>
+          <h4 class="text-center mb-3">Reverse Osmosis (RO)</h4>
+          <p class="mb-0 flex-grow-1">Complete RO desalination systems, including chemical cleaning, commissioning, maintenance, and turnkey delivery for multiple applications.</p>
+          <a href="{% url 'services:services' %}" class="readmore mt-3 text-center">
+            Learn more <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="300">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white">
+          <div class="icon-wrapper mb-4 mx-auto">
+            <i class="fa-solid fa-compass-drafting fs-2 text-primary"></i>
+          </div>
+          <h4 class="text-center mb-3">Engineering & Design</h4>
+          <p class="mb-0 flex-grow-1">Complete engineering solutions including mechanical design, plant layout, system calculations, and technical consultancy for industrial projects.</p>
+          <a href="{% url 'services:services' %}" class="readmore mt-3 text-center">
+            Learn more <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="400">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white">
+          <div class="icon-wrapper mb-4 mx-auto">
+            <i class="fa-solid fa-trowel-bricks fs-2 text-primary"></i>
+          </div>
+          <h4 class="text-center mb-3">Mechanical Installations</h4>
+          <p class="mb-0 flex-grow-1">Supply and installation of pipelines, filtration units, cooling tower systems, and complete electromechanical works for heavy industries.</p>
+          <a href="{% url 'services:services' %}" class="readmore mt-3 text-center">
+            Learn more <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="500">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white">
+          <div class="icon-wrapper mb-4 mx-auto">
+            <i class="fa-solid fa-helmet-safety fs-2 text-primary"></i>
+          </div>
+          <h4 class="text-center mb-3">Operation & Maintenance</h4>
+          <p class="mb-0 flex-grow-1">Professional O&M services ensuring optimal system performance, regular maintenance, troubleshooting, and on-call technical support.</p>
+          <a href="{% url 'services:services' %}" class="readmore mt-3 text-center">
+            Learn more <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 animate-on-scroll" data-delay="600">
+        <div class="service-item position-relative h-100 d-flex flex-column p-4 rounded-3 shadow-sm bg-white">
+          <div class="icon-wrapper mb-4 mx-auto">
+            <i class="fa-solid fa-arrow-up-from-ground-water fs-2 text-primary"></i>
+          </div>
+          <h4 class="text-center mb-3">Industrial Cooling Solutions</h4>
+          <p class="mb-0 flex-grow-1">Installation and rehabilitation of cooling towers, drift eliminators, fill packing, and full system upgrades for industrial cooling applications.</p>
+          <a href="{% url 'services:services' %}" class="readmore mt-3 text-center">
+            Learn more <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Services Section -->
+
+<!-- ======= Why Choose Us Section ======= -->
+<section id="alt-services" class="alt-services py-5">
+  <div class="container">
+    <div class="row justify-content-around gy-4">
+      <div class="col-lg-6 img-bg rounded-3 animate-on-scroll" 
+           style="background-image: url({% static 'assets/img/alt-services.jpg' %}); height: 400px; background-size: cover; background-position: center;" 
+           data-delay="100">
+      </div>
+      <div class="col-lg-5 d-flex flex-column justify-content-center">
+        <h3 class="mb-4 animate-on-scroll" data-delay="200">Why Choose Green Zag</h3>
+        <p class="mb-4 animate-on-scroll" data-delay="300">Green Zag provides reliable engineering solutions through advanced technologies, expert teams, and strong partnerships in the water treatment and industrial sectors.</p>
+
+        <div class="icon-box d-flex position-relative mb-4 animate-on-scroll" data-delay="400">
+          <i class="bi bi-easel flex-shrink-0 fs-4 text-primary me-3"></i>
+          <div>
+            <h4 class="mb-1"><a href="#" class="stretched-link">Professional Engineering Expertise</a></h4>
+            <p class="mb-0">Our team of engineers, chemists, and technicians bring decades of experience in designing and delivering efficient treatment systems.</p>
+          </div>
+        </div>
+        <div class="icon-box d-flex position-relative mb-4 animate-on-scroll" data-delay="500">
+          <i class="bi bi-patch-check flex-shrink-0 fs-4 text-primary me-3"></i>
+          <div>
+            <h4 class="mb-1"><a href="#" class="stretched-link">Turnkey Project Delivery</a></h4>
+            <p class="mb-0">Complete EPC projects including civil, mechanical, electrical, installation, commissioning, and start-up services.</p>
+          </div>
+        </div>
+        <div class="icon-box d-flex position-relative mb-4 animate-on-scroll" data-delay="600">
+          <i class="bi bi-gear flex-shrink-0 fs-4 text-primary me-3"></i>
+          <div>
+            <h4 class="mb-1"><a href="#" class="stretched-link">Operation & Maintenance Support</a></h4>
+            <p class="mb-0">Reliable O&M services ensuring long-term performance, preventative maintenance, troubleshooting, and on-call support.</p>
+          </div>
+        </div>
+        <div class="icon-box d-flex position-relative mb-4 animate-on-scroll" data-delay="700">
+          <i class="bi bi-building-gear flex-shrink-0 fs-4 text-primary me-3"></i>
+          <div>
+            <h4 class="mb-1"><a href="#" class="stretched-link">Global Industrial Partnerships</a></h4>
+            <p class="mb-0">Strong cooperation with leading Turkish and Italian manufacturers, enabling high-quality equipment and advanced industrial solutions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Why Choose Us Section -->
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features section-bg py-5">
+  <div class="container">
+    <ul class="nav nav-tabs row g-2 d-flex mb-4">
+      <li class="nav-item col-6 col-md-3">
+        <a class="nav-link active show text-center" data-bs-toggle="tab" data-bs-target="#tab-1">
+          <h4 class="mb-0">Water Treatment</h4>
+        </a>
+      </li>
+      <li class="nav-item col-6 col-md-3">
+        <a class="nav-link text-center" data-bs-toggle="tab" data-bs-target="#tab-2">
+          <h4 class="mb-0">RO Systems</h4>
+        </a>
+      </li>
+      <li class="nav-item col-6 col-md-3">
+        <a class="nav-link text-center" data-bs-toggle="tab" data-bs-target="#tab-3">
+          <h4 class="mb-0">Cooling Systems</h4>
+        </a>
+      </li>
+      <li class="nav-item col-6 col-md-3">
+        <a class="nav-link text-center" data-bs-toggle="tab" data-bs-target="#tab-4">
+          <h4 class="mb-0">Mechanical Works</h4>
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active show" id="tab-1">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1 animate-on-scroll" data-delay="100">
+            <h3 class="mb-3">Advanced Water & Wastewater Treatment Solutions</h3>
+            <p class="fst-italic mb-3">
+              Green Zag provides complete municipal and industrial treatment systems powered by advanced filtration and biological technologies.
+            </p>
+            <ul class="list-unstyled">
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Design and installation of full treatment lines.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Filtration, clarification, and sludge handling systems.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Upgrade and rehabilitation of existing water treatment facilities.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center animate-on-scroll" data-delay="200">
+            <img src="{% static 'assets/img/p7.jpg' %}" alt="Water Treatment" class="img-fluid rounded-3">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="tab-2">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1 animate-on-scroll" data-delay="100">
+            <h3 class="mb-3">Reverse Osmosis & Desalination Technologies</h3>
+            <p class="fst-italic mb-3">
+              Specialized RO solutions for industrial, municipal, and commercial applications with high performance and reliability.
+            </p>
+            <ul class="list-unstyled">
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> RO plant design, supply, and installation.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Chemical cleaning and preventative maintenance.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Full turnkey delivery including civil, mechanical, and electrical works.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> High capacity units up to large-scale industrial requirements.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center animate-on-scroll" data-delay="200">
+            <img src="{% static 'assets/img/features-2.jpg' %}" alt="RO Systems" class="img-fluid rounded-3">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="tab-3">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1 animate-on-scroll" data-delay="100">
+            <h3 class="mb-3">Industrial Cooling & Filtration Systems</h3>
+            <ul class="list-unstyled mb-3">
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Cooling tower installation and rehabilitation.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Drift eliminators, fill packing, and distribution system upgrades.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Customized solutions for steel, chemical, and heavy industries.</li>
+            </ul>
+            <p class="fst-italic mb-0">
+              Ensuring efficient cooling performance with durable, high-quality components designed for continuous operation.
+            </p>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center animate-on-scroll" data-delay="200">
+            <img src="{% static 'assets/img/p8.jpg' %}" alt="Cooling Systems" class="img-fluid rounded-3">
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane" id="tab-4">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6 order-2 order-lg-1 animate-on-scroll" data-delay="100">
+            <h3 class="mb-3">Mechanical & Steel Structure Works</h3>
+            <p class="fst-italic mb-3">
+              High-precision fabrication and installation services meeting international standards for industrial operations.
+            </p>
+            <ul class="list-unstyled">
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Steel structure fabrication and erection.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Piping systems installation and testing.</li>
+              <li class="d-flex mb-2"><i class="bi bi-check2-circle text-success me-2"></i> Mechanical works supporting major industrial facilities.</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 text-center animate-on-scroll" data-delay="200">
+            <img src="{% static 'assets/img/features-4.jpg' %}" alt="Mechanical Works" class="img-fluid rounded-3">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Features Section -->
+
+<!-- ======= Our Projects Section ======= -->
+<section id="projects" class="projects py-5">
+  <div class="container">
+    <div class="section-header text-center mb-5 animate-on-scroll" data-delay="0">
+      <h2 class="section-title mb-3">Our Projects</h2>
+      <p class="mb-0">Green Zag has successfully delivered turnkey water treatment systems, RO plants, cooling tower solutions, and industrial engineering projects across major sectors in Egypt.</p>
+    </div>
+
+    <ul class="nav nav-tabs row g-2 d-flex justify-content-center mb-4" id="portfolio-tabs" role="tablist">
+      <li class="nav-item col-6 col-md-2" role="presentation">
+        <button class="nav-link active show text-center w-100" data-bs-toggle="tab" data-bs-target="#tab-content-all" type="button" role="tab">All</button>
+      </li>
+      <li class="nav-item col-6 col-md-2" role="presentation">
+        <button class="nav-link text-center w-100" data-bs-toggle="tab" data-bs-target="#tab-content-water" type="button" role="tab">Water Treatment</button>
+      </li>
+      <li class="nav-item col-6 col-md-2" role="presentation">
+        <button class="nav-link text-center w-100" data-bs-toggle="tab" data-bs-target="#tab-content-ro" type="button" role="tab">RO Plants</button>
+      </li>
+      <li class="nav-item col-6 col-md-2" role="presentation">
+        <button class="nav-link text-center w-100" data-bs-toggle="tab" data-bs-target="#tab-content-cooling" type="button" role="tab">Cooling Towers</button>
+      </li>
+      <li class="nav-item col-6 col-md-2" role="presentation">
+        <button class="nav-link text-center w-100" data-bs-toggle="tab" data-bs-target="#tab-content-industrial" type="button" role="tab">Industrial & Steel</button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="portfolio-tab-content">
+      <!-- Tab: All -->
+      <div class="tab-pane fade show active" id="tab-content-all" role="tabpanel">
+        <div class="row g-4 portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="0">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/remodeling-1.jpg' %}" class="card-img-top rounded-top" alt="Vinavil – Cooling Tower Fill Packing">
+              <div class="card-body p-4">
+                <h5 class="card-title">Vinavil – Cooling Tower Fill Packing</h5>
+                <p class="card-text">Supply & installation of cooling tower fill packing.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/remodeling-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="100">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/construction-1.jpg' %}" class="card-img-top rounded-top" alt="Elgarhy Steel – Filtration System Rehab">
+              <div class="card-body p-4">
+                <h5 class="card-title">Elgarhy Steel – Filtration System Rehab</h5>
+                <p class="card-text">Complete maintenance & rehabilitation for water filtration system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/construction-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="200">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/repairs-1.jpg' %}" class="card-img-top rounded-top" alt="Semadco – Cooling Tower System">
+              <div class="card-body p-4">
+                <h5 class="card-title">Semadco – Cooling Tower System</h5>
+                <p class="card-text">Design & installation of complete cooling tower system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/repairs-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="300">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/design-1.jpg' %}" class="card-img-top rounded-top" alt="EBIC – RO Plant 700 m³/day">
+              <div class="card-body p-4">
+                <h5 class="card-title">EBIC – RO Plant 700 m³/day</h5>
+                <p class="card-text">Design, supply, installation & commissioning of RO system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/design-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="400">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/construction-2.jpg' %}" class="card-img-top rounded-top" alt="Guardian Glass – ESP System Isolation">
+              <div class="card-body p-4">
+                <h5 class="card-title">Guardian Glass – ESP System Isolation</h5>
+                <p class="card-text">Complete isolation & maintenance for ESP dedusting system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/construction-2.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="500">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/construction-3.jpg' %}" class="card-img-top rounded-top" alt="Abo Zaabal Steel – Cooling System 400 m³/hr">
+              <div class="card-body p-4">
+                <h5 class="card-title">Abo Zaabal Steel – Cooling System 400 m³/hr</h5>
+                <p class="card-text">Design & installation of water cooling system including filtration.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/construction-3.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other tabs: kept static for simplicity (you can enhance later with JS filtering) -->
+      <!-- Water Treatment -->
+      <div class="tab-pane fade" id="tab-content-water" role="tabpanel">
+        <div class="row g-4 portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="100">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/construction-1.jpg' %}" class="card-img-top rounded-top" alt="Elgarhy Steel – Filtration System Rehab">
+              <div class="card-body p-4">
+                <h5 class="card-title">Elgarhy Steel – Filtration System Rehab</h5>
+                <p class="card-text">Complete maintenance & rehabilitation for water filtration system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/construction-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="200">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/design-1.jpg' %}" class="card-img-top rounded-top" alt="EBIC – RO Plant 700 m³/day">
+              <div class="card-body p-4">
+                <h5 class="card-title">EBIC – RO Plant 700 m³/day</h5>
+                <p class="card-text">Design, supply, installation & commissioning of RO system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/design-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RO Plants -->
+      <div class="tab-pane fade" id="tab-content-ro" role="tabpanel">
+        <div class="row g-4 portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="100">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/design-1.jpg' %}" class="card-img-top rounded-top" alt="EBIC – RO Plant 700 m³/day">
+              <div class="card-body p-4">
+                <h5 class="card-title">EBIC – RO Plant 700 m³/day</h5>
+                <p class="card-text">Design, supply, installation & commissioning of RO system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/design-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cooling Towers -->
+      <div class="tab-pane fade" id="tab-content-cooling" role="tabpanel">
+        <div class="row g-4 portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="100">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/remodeling-1.jpg' %}" class="card-img-top rounded-top" alt="Vinavil – Cooling Tower Fill Packing">
+              <div class="card-body p-4">
+                <h5 class="card-title">Vinavil – Cooling Tower Fill Packing</h5>
+                <p class="card-text">Supply & installation of cooling tower fill packing.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/remodeling-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="200">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/repairs-1.jpg' %}" class="card-img-top rounded-top" alt="Semadco – Cooling Tower System">
+              <div class="card-body p-4">
+                <h5 class="card-title">Semadco – Cooling Tower System</h5>
+                <p class="card-text">Design & installation of complete cooling tower system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/repairs-1.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="300">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/construction-3.jpg' %}" class="card-img-top rounded-top" alt="Abo Zaabal Steel – Cooling System 400 m³/hr">
+              <div class="card-body p-4">
+                <h5 class="card-title">Abo Zaabal Steel – Cooling System 400 m³/hr</h5>
+                <p class="card-text">Design & installation of water cooling system including filtration.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/construction-3.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Industrial & Steel -->
+      <div class="tab-pane fade" id="tab-content-industrial" role="tabpanel">
+        <div class="row g-4 portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item animate-on-scroll" data-delay="100">
+            <div class="portfolio-content h-100 card shadow-sm rounded-3 border-0">
+              <img src="{% static 'assets/img/projects/construction-2.jpg' %}" class="card-img-top rounded-top" alt="Guardian Glass – ESP System Isolation">
+              <div class="card-body p-4">
+                <h5 class="card-title">Guardian Glass – ESP System Isolation</h5>
+                <p class="card-text">Complete isolation & maintenance for ESP dedusting system.</p>
+                <div class="portfolio-links">
+                  <a href="{% static 'assets/img/projects/construction-2.jpg' %}" class="glightbox preview-link">
+                    <i class="bi bi-zoom-in"></i>
+                  </a>
+                  <a href="#" class="details-link">
+                    <i class="bi bi-link-45deg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Our Projects Section -->
+
+<!-- ✨ Enhanced CSS & JS -->
+<style>
+  :root {
+    --color-success: #2a9f68;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow: 0 4px 12px -3px rgba(0,0,0,0.08);
+    --rounded: 0.5rem;
+    --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Typography */
+  .section-title {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  @media (max-width: 768px) {
+    .section-title { font-size: 1.75rem; }
+  }
+
+  .hero-title {
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .hero-title .text-highlight {
+    color: var(--color-primary);
+  }
+  .hero-text {
+    opacity: 0.9;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  /* Buttons */
+  .btn-get-started {
+    background: var(--color-primary);
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: var(--rounded);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  .btn-get-started:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(42, 157, 143, 0.25);
+  }
+
+  .readmore {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+  .readmore:hover {
+    color: var(--color-secondary);
+  }
+
+  /* Cards & Items */
+  .card-item, .service-item, .portfolio-content {
+    border: none;
+    border-radius: var(--rounded);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+  .card-item:hover,
+  .service-item:hover,
+  .portfolio-content:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+  }
+  .card-bg {
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+  }
+  .service-item {
+    padding: 1.5rem !important;
+  }
+
+  /* Tabs */
+  .nav-tabs .nav-link {
+    border: 1px solid transparent;
+    color: #444;
+    font-weight: 600;
+    padding: 0.75rem 0;
+    margin: 0 0.25rem;
+    border-radius: var(--rounded) var(--rounded) 0 0;
+    transition: var(--transition);
+  }
+  .nav-tabs .nav-link.active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .projects .nav-link {
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0.375rem;
+    margin: 0 0.125rem;
+    padding: 0.5rem 0;
+    font-weight: 500;
+  }
+  .projects .nav-link.active {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  /* Animation System */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = parseInt(entry.target.dataset.delay) || 0;
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, delay);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      el.classList.remove('visible');
+      observer.observe(el);
+    });
+  });
+</script>
+
+{% endblock %}

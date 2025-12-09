@@ -1,0 +1,437 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'assets/img/breadcrumbs-bg.jpg' %}');">
+      <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
+        <h2>About Us</h2>
+        <ol class="d-flex justify-content-center">
+          <li><a href="{% url 'home:home' %}">Home</a></li>
+          <li>About Us</li>
+        </ol>
+      </div>
+    </div>
+    <!-- End Breadcrumbs -->
+
+    <!-- ======= About Section ======= -->
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container" data-aos="fade-up">
+    <div class="row position-relative">
+      <div class="col-lg-5 about-img" style="background-image: url({% static 'assets/img/about.jpg' %});"></div>
+      <div class="col-lg-7 ps-lg-5">
+        <!-- ✅ تم تطبيق CSS مباشرة على h2 -->
+        <h2 class="about-title">About Green Zag</h2>
+        <div class="our-story">
+          <h3>Who We Are</h3>
+          <p>
+            Green Zag is a professional engineering and contracting company established in the field of <strong>environmental technology</strong>. 
+            We specialize in providing end-to-end technological solutions for the design, construction, operation, and maintenance of water and wastewater treatment facilities for industrial clients and public authorities.
+          </p>
+          <p>
+            Our team comprises highly qualified engineers, chemists, technicians, and skilled laborers — all with extensive hands-on experience from major water and wastewater treatment organizations.
+          </p>
+          <ul class="list-unstyled mt-3">
+            <li class="d-flex align-items-start mb-2">
+              <span class="me-2 text-primary fs-5">💧</span> <!-- ✅ أيقونة -->
+              <span>Focus on sustainable, high-efficiency treatment systems</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <span class="me-2 text-primary fs-5">🏆</span> <!-- ✅ أيقونة -->
+              <span>Proven track record in major regional projects</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <span class="me-2 text-primary fs-5">🛠️</span> <!-- ✅ أيقونة -->
+              <span>Comprehensive after-sales and maintenance support</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About Section -->
+    <!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg py-5">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center mb-5">
+          <h2 class="mb-3">Our Core Services</h2>
+          <p class="mb-0">We offer a complete range of services in water and wastewater treatment.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box h-100 d-flex flex-column text-center p-4 rounded-3 shadow-sm bg-white">
+              <div class="icon-wrapper mb-4 mx-auto">
+                <i class="bi bi-droplet-half"></i>
+              </div>
+              <h4 class="mb-3"><a href="#" class="stretched-link">Municipal & Industrial Water/Wastewater Treatment</a></h4>
+              <p class="mb-0">End-to-end solutions tailored to meet local regulations and industry standards.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box h-100 d-flex flex-column text-center p-4 rounded-3 shadow-sm bg-white">
+              <div class="icon-wrapper mb-4 mx-auto">
+                <i class="bi bi-sun"></i>
+              </div>
+              <h4 class="mb-3"><a href="#" class="stretched-link">Reverse Osmosis (RO) Desalination</a></h4>
+              <p class="mb-0">Advanced desalination plants for sustainable freshwater production.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box h-100 d-flex flex-column text-center p-4 rounded-3 shadow-sm bg-white">
+              <div class="icon-wrapper mb-4 mx-auto">
+                <i class="bi bi-gear"></i>
+              </div>
+              <h4 class="mb-3"><a href="#" class="stretched-link">Plant Upgrading & Refurbishment</a></h4>
+              <p class="mb-0">Optimize performance and extend the life of existing treatment systems.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="icon-box h-100 d-flex flex-column text-center p-4 rounded-3 shadow-sm bg-white">
+              <div class="icon-wrapper mb-4 mx-auto">
+                <i class="bi bi-tools"></i>
+              </div>
+              <h4 class="mb-3"><a href="#" class="stretched-link">Operation & Maintenance Services</a></h4>
+              <p class="mb-0">Ensuring optimal performance through expert on-call and preventive maintenance.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+            <div class="icon-box h-100 d-flex flex-column text-center p-4 rounded-3 shadow-sm bg-white">
+              <div class="icon-wrapper mb-4 mx-auto">
+                <i class="bi bi-box-seam"></i>
+              </div>
+              <h4 class="mb-3"><a href="#" class="stretched-link">Spare Parts & Chemicals Supply</a></h4>
+              <p class="mb-0">Guaranteed availability of parts for all systems we represent.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="600">
+            <div class="icon-box h-100 d-flex flex-column text-center p-4 rounded-3 shadow-sm bg-white">
+              <div class="icon-wrapper mb-4 mx-auto">
+                <i class="bi bi-building"></i>
+              </div>
+              <h4 class="mb-3"><a href="#" class="stretched-link">Steel Structures & Erection</a></h4>
+              <p class="mb-0">Custom fabrication and installation for industrial infrastructure.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <style>
+      .services .icon-wrapper {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        transition: all 0.3s ease;
+      }
+      .services .icon-wrapper i {
+        font-size: 36px;
+        color: #fff;
+      }
+      .services .icon-box:hover .icon-wrapper {
+        transform: translateY(-10px) scale(1.1);
+        box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+      }
+      .about .about-title {
+    font-size: 42px;
+    font-weight: 700;
+    font-family: var(--font-secondary);
+    margin: 30px 0;
+}
+.section-header h2 {
+    font-size: 29px;
+    font-weight: 700;
+    position: relative;
+    color: #2e3135;
+}
+.section-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    position: relative;
+    color: #2e3135;
+}
+    </style>
+    <!-- End Services Section -->
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter section-bg py-5">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex flex-column align-items-center justify-content-center p-4 h-100 rounded-3 bg-white shadow-sm">
+              <i class="bi bi-emoji-smile color-blue mb-2 fs-1"></i>
+              <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter fs-2 fw-bold"></span>
+              <p class="mb-0">Major Clients</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex flex-column align-items-center justify-content-center p-4 h-100 rounded-3 bg-white shadow-sm">
+              <i class="bi bi-journal-richtext color-orange mb-2 fs-1"></i>
+              <span data-purecounter-start="0" data-purecounter-end="14" data-purecounter-duration="1" class="purecounter fs-2 fw-bold"></span>
+              <p class="mb-0">Completed Projects</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex flex-column align-items-center justify-content-center p-4 h-100 rounded-3 bg-white shadow-sm">
+              <i class="bi bi-headset color-green mb-2 fs-1"></i>
+              <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter fs-2 fw-bold"></span>
+              <p class="mb-0">Core Services</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex flex-column align-items-center justify-content-center p-4 h-100 rounded-3 bg-white shadow-sm">
+              <i class="bi bi-people color-pink mb-2 fs-1"></i>
+              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter fs-2 fw-bold"></span>
+              <p class="mb-0">Strategic Partners</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Stats Counter Section -->
+
+    <!-- ======= Partnerships Section ======= -->
+    <section id="partnerships" class="partnerships py-5 bg-light">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center mb-5">
+          <h2 class="mb-3">Strategic Partners</h2>
+          <p class="mb-0">Global expertise, locally delivered through trusted partnerships.</p>
+        </div>
+        <div class="row gy-4 justify-content-center">
+          <!-- Partner 1: Aritim -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 partner-card shadow border-0 text-center p-4 rounded-3">
+              <div class="partner-icon mb-3 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256">
+                  <path fill="#1e40af" d="M172 24H84a60 60 0 0 0 0 120h88a60 60 0 0 0 0-120Zm0 104a44 44 0 0 1-44-44a44 44 0 0 1 44-44a44 44 0 0 1 44 44a44 44 0 0 1-44 44Zm0-72a28 28 0 0 0-28 28a28 28 0 0 0 28 28a28 28 0 0 0 28-28a28 28 0 0 0-28-28Zm-88 88a44 44 0 0 1 0-88a44 44 0 0 1 0 88Zm-44-88a44 44 0 0 0-44 44a44 44 0 0 0 0 88h16a60 60 0 0 1 0-120Zm44 120a44 44 0 0 1 0-88a44 44 0 0 1 0 88Zm-60-88a28 28 0 0 0-28 28a28 28 0 0 0 0 56h12a44 44 0 0 1 0-88Zm12 88a28 28 0 0 0 0-56a28 28 0 0 0 0 56Z"/>
+                </svg>
+              </div>
+              <h4 class="card-title mb-2">Aritim Mühendislik</h4>
+              <h5 class="text-muted mb-3">Turkey</h5>
+              <p class="card-text mb-0">Specialized in water and sewage treatment systems across all industries.</p>
+            </div>
+          </div>
+          <!-- Partner 2: RDM Makina -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 partner-card shadow border-0 text-center p-4 rounded-3">
+              <div class="partner-icon mb-3 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256">
+                  <path fill="#7e22ce" d="M240 128a8 8 0 0 1-8 8h-8v80a8 8 0 0 1-8 8H40a8 8 0 0 1-8-8V136h-8a8 8 0 0 1 0-16h8V48a8 8 0 0 1 8-8h176a8 8 0 0 1 8 8v72h8a8 8 0 0 1 8 8Zm-16 0H208V56H48v72h176Zm-88 88a8 8 0 0 0 8-8v-8h32v8a8 8 0 0 0 16 0v-16a8 8 0 0 0-8-8h-32a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8Zm88-8a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h32a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8h-32Z"/>
+                </svg>
+              </div>
+              <h4 class="card-title mb-2">RDM Makina (Demir Metal)</h4>
+              <h5 class="text-muted mb-3">Turkey</h5>
+              <p class="card-text mb-0">Delivering engineering equipment and spare parts for steel & cement industries.</p>
+            </div>
+          </div>
+          <!-- Partner 3: FillTech -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 partner-card shadow border-0 text-center p-4 rounded-3">
+              <div class="partner-icon mb-3 mx-auto">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 256 256">
+                  <path fill="#0d9488" d="M184 88a8 8 0 0 1 8-8h24V56a8 8 0 0 1 16 0v24a8 8 0 0 1-8 8h-24a8 8 0 0 1-8-8Zm48 32a8 8 0 0 0-8 8v40a8 8 0 0 0 16 0v-40a8 8 0 0 0-8-8Zm-40 8a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Zm-80 0a8 8 0 0 0-8 8v8a8 8 0 0 0 16 0v-8a8 8 0 0 0-8-8Zm-40 0a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Zm-40-8a8 8 0 0 0-8 8v40a8 8 0 0 0 16 0v-40a8 8 0 0 0-8-8Zm184 80a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Zm-40 8a8 8 0 0 0-8 8v8a8 8 0 0 0 16 0v-8a8 8 0 0 0-8-8Zm-40 0a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Zm-40 0a8 8 0 0 0-8 8v8a8 8 0 0 0 16 0v-8a8 8 0 0 0-8-8Zm-40-8a8 8 0 0 0-8 8v24a8 8 0 0 0 16 0v-24a8 8 0 0 0-8-8Z"/>
+                </svg>
+              </div>
+              <h4 class="card-title mb-2">FillTech</h4>
+              <h5 class="text-muted mb-3">Cooling Towers</h5>
+              <p class="card-text mb-0">Expert in cooling tower systems, equipment & spare parts.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Partnerships Section -->
+
+    <!-- ======= Projects Highlights Section ======= -->
+    <section id="projects" class="projects py-5 section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center mb-5">
+          <h2 class="mb-3">Selected Projects</h2>
+          <p class="mb-0">A showcase of our successful project deliveries across key sectors.</p>
+        </div>
+        <div class="row g-4">
+          <!-- Column 1: Engineering & Construction -->
+          <div class="col-lg-6">
+            <div class="card h-100 project-category-card border-0 shadow-sm p-4 rounded-3">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-building text-primary fs-4 me-2"></i>
+                <h4 class="mb-0">Engineering & Construction</h4>
+              </div>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <strong>Abo Zaabal Steel:</strong> Design, supply, install & commissioning of 400 m³/hr cooling system (turnkey) — civil, mechanical & electrical works.
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <strong>Ebico:</strong> Design, supply, install & commissioning of 700 m³/day RO plant.
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <strong>Semadco:</strong> Cooling tower system — complete Design & Installation.
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <strong>EFC Company:</strong> Steel structure for new RO plant.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Column 2: Maintenance & Specialized Services -->
+          <div class="col-lg-6">
+            <div class="card h-100 project-category-card border-0 shadow-sm p-4 rounded-3">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-tools text-warning fs-4 me-2"></i>
+                <h4 class="mb-0">Maintenance & Specialized Services</h4>
+              </div>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <strong>Attaka Power Station:</strong> RO plant maintenance & chemical cleaning.
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <strong>Elgarhy Steel:</strong> Complete water filtration system rehabilitation.
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <strong>Guardian Glass:</strong> ESP system isolation & maintenance.
+                </li>
+                <li class="mb-2">
+                  <i class="bi bi-check-circle-fill text-success me-2"></i>
+                  <strong>Vinavil & Semadco:</strong> Supply & install of cooling tower fill packing & drift eliminators.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Projects Highlights Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team py-5">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center mb-5">
+          <h2 class="mb-3">Our Team</h2>
+          <p class="mb-0">Our qualified staff is capable of supporting electro-mechanical installation, commissioning, operator training, and on-call maintenance — ensuring optimal performance and longevity of every system we deliver.</p>
+        </div>
+        <div class="row gy-5">
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="100">
+            <div class="member-card h-100 d-flex flex-column align-items-center text-center p-4 rounded-3 bg-white shadow-sm">
+              <div class="member-img mb-3 rounded-circle overflow-hidden" style="width: 150px; height: 150px;">
+                <img src="{% static 'assets/img/team/team-1.jpg' %}" class="img-fluid" alt="Walter White" style="object-fit: cover;">
+              </div>
+              <div class="member-info">
+                <h4 class="mb-1">Walter White</h4>
+                <span class="text-muted">Chief Executive Officer</span>
+                <div class="social mt-3">
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="200">
+            <div class="member-card h-100 d-flex flex-column align-items-center text-center p-4 rounded-3 bg-white shadow-sm">
+              <div class="member-img mb-3 rounded-circle overflow-hidden" style="width: 150px; height: 150px;">
+                <img src="{% static 'assets/img/team/team-2.jpg' %}" class="img-fluid" alt="Sarah Jhonson" style="object-fit: cover;">
+              </div>
+              <div class="member-info">
+                <h4 class="mb-1">Sarah Jhonson</h4>
+                <span class="text-muted">Product Manager</span>
+                <div class="social mt-3">
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="300">
+            <div class="member-card h-100 d-flex flex-column align-items-center text-center p-4 rounded-3 bg-white shadow-sm">
+              <div class="member-img mb-3 rounded-circle overflow-hidden" style="width: 150px; height: 150px;">
+                <img src="{% static 'assets/img/team/team-3.jpg' %}" class="img-fluid" alt="William Anderson" style="object-fit: cover;">
+              </div>
+              <div class="member-info">
+                <h4 class="mb-1">William Anderson</h4>
+                <span class="text-muted">CTO</span>
+                <div class="social mt-3">
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="400">
+            <div class="member-card h-100 d-flex flex-column align-items-center text-center p-4 rounded-3 bg-white shadow-sm">
+              <div class="member-img mb-3 rounded-circle overflow-hidden" style="width: 150px; height: 150px;">
+                <img src="{% static 'assets/img/team/team-4.jpg' %}" class="img-fluid" alt="Amanda Jepson" style="object-fit: cover;">
+              </div>
+              <div class="member-info">
+                <h4 class="mb-1">Amanda Jepson</h4>
+                <span class="text-muted">Accountant</span>
+                <div class="social mt-3">
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="500">
+            <div class="member-card h-100 d-flex flex-column align-items-center text-center p-4 rounded-3 bg-white shadow-sm">
+              <div class="member-img mb-3 rounded-circle overflow-hidden" style="width: 150px; height: 150px;">
+                <img src="{% static 'assets/img/team/team-5.jpg' %}" class="img-fluid" alt="Brian Doe" style="object-fit: cover;">
+              </div>
+              <div class="member-info">
+                <h4 class="mb-1">Brian Doe</h4>
+                <span class="text-muted">Marketing</span>
+                <div class="social mt-3">
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 member" data-aos="fade-up" data-aos-delay="600">
+            <div class="member-card h-100 d-flex flex-column align-items-center text-center p-4 rounded-3 bg-white shadow-sm">
+              <div class="member-img mb-3 rounded-circle overflow-hidden" style="width: 150px; height: 150px;">
+                <img src="{% static 'assets/img/team/team-6.jpg' %}" class="img-fluid" alt="Josepha Palas" style="object-fit: cover;">
+              </div>
+              <div class="member-info">
+                <h4 class="mb-1">Josepha Palas</h4>
+                <span class="text-muted">Operation</span>
+                <div class="social mt-3">
+                  <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                  <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Team Section -->
+     </main>
+
+{% endblock %}

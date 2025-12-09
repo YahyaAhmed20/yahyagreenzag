@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<main id="main">
+
+  <!-- ======= Breadcrumbs ======= -->
+  <div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'assets/img/breadcrumbs-bg.jpg' %}');">
+    <div class="container position-relative d-flex flex-column align-items-center" data-scroll-fade>
+      <h2>{{ project.name }}</h2>
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="{% url 'ourproject:project_list' %}">Projects</a></li>
+        <li>{{ project.name }}</li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ======= Project Details Section ======= -->
+  <div class="container py-3 mt-2 text-center" data-scroll-slide-up>  <!-- ✅ نفس التأثير -->
+    {% if project.description %}
+      <p class="lead text-muted">{{ project.description }}</p>
+    {% endif %}
+  </div>
+
+  <div class="container pb-5">
+    <div class="row g-4">
+      {% for image in project.gallery_images.all %}
+        <div class="col-md-4 col-sm-6 text-center" data-scroll-zoom-in data-delay-index="{{ forloop.counter0 }}">
+          <div class="card border-0 shadow-sm h-100 custom-project-card">
+            <img src="{{ image.image.url }}" class="card-img-top uniform-img" alt="{{ project.name }} Image" loading="lazy">
+          </div>
+        </div>
+      {% empty %}
+        <p class="text-center" data-scroll-fade>لا توجد صور إضافية لهذا المشروع.</p>
+      {% endfor %}
+    </div>
+  </div>
+
+</main>
+
+<!-- Scroll Animations Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animated");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll("[data-scroll-fade]").forEach(el => {
+    el.style.opacity = 0;
+    el.style.transition = "opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    observer.observe(el);
+    el.classList.add("animated");
+  });
+
+  document.querySelectorAll("[data-scroll-slide-up]").forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    observer.observe(el);
+    el.classList.add("animated");
+  });
+
+  document.querySelectorAll("[data-scroll-zoom-in]").forEach((el, index) => {
+    const delayIndex = el.getAttribute("data-delay-index") || index;
+    el.style.opacity = 0;
+    el.style.transform = "scale(0.95)";
+    el.style.transition = `opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) ${delayIndex * 0.1}s`;
+    observer.observe(el);
+    el.classList.add("animated");
+  });
+
+  // Trigger animations after observing
+  setTimeout(() => {
+    document.querySelectorAll("[data-scroll-fade].animated").forEach(el => {
+      el.style.opacity = 1;
+    });
+    document.querySelectorAll("[data-scroll-slide-up].animated").forEach(el => {
+      el.style.opacity = 1;
+      el.style.transform = "translateY(0)";
+    });
+    document.querySelectorAll("[data-scroll-zoom-in].animated").forEach(el => {
+      el.style.opacity = 1;
+      el.style.transform = "scale(1)";
+    });
+  }, 100);
+});
+</script>
+
+<style>
+/* ===== Custom Styles ===== */
+.uniform-img {
+  width: 100%;
+  height: 250px;
+  aspect-ratio: 4 / 3; /* للشاشة الكبيرة */
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.custom-project-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+}
+
+.custom-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.uniform-img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== Responsive Adjustments ===== */
+
+/* للشاشة الكبيرة (لاب/ديسك توب) */
+@media (min-width: 577px) {
+  .uniform-img {
+    height: 250px;
+    aspect-ratio: 4 / 3;
+  }
+  .custom-project-card {
+    min-height: 350px;
+  }
+}
+
+/* للموبايل */
+@media (max-width: 576px) {
+  .uniform-img {
+    height: auto;
+    aspect-ratio: 3 / 4; /* صورة أطول — مناسبة للموبايل */
+  }
+  .custom-project-card {
+    min-height: 400px;
+  }
+  .col-sm-6 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ===== Animation Classes ===== */
+[data-scroll-fade],
+[data-scroll-slide-up],
+[data-scroll-zoom-in] {
+  opacity: 0;
+}
+
+.animated {
+  opacity: 1 !important;
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+</style>
+
+{% endblock %}
