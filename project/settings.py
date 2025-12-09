@@ -28,7 +28,17 @@ SECRET_KEY = 'django-insecure-%z-nr-=-=@yy#@a0mze5(qb+j!nc$w%kk@9=a2a!p5@bo9u3v=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'greenzag.up.railway.app',
+    "127.0.0.1",
+    "localhost",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://greenzag.up.railway.app",
+ 
+
+]
 
 
 # Application definition
