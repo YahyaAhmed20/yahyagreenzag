@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'about',
     'services',
     'ourproject',
+    'partners',
 
     
 
