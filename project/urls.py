@@ -28,6 +28,7 @@ urlpatterns = [
     path('ourproject/', include('ourproject.urls', namespace='ourproject')),
     path('partners/', include('partners.urls', namespace='partners')),
     path('contact-us/', include('contact.urls', namespace='contact')),
+    path('news/', include('news.urls', namespace='news')),
 
 
 

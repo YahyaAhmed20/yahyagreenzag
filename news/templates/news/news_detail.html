@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'assets/img/breadcrumbs-bg.jpg' %}');">
+  <div class="container position-relative d-flex flex-column align-items-center" data-scroll-fade>
+    <h2 class="text-white">News Detail</h2>
+    <ol class="breadcrumb mb-0" style="--bs-breadcrumb-divider: '>';">
+      <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+      <li class="breadcrumb-item"><a href="{% url 'news:news' %}" class="text-white">News</a></li>
+      <li class="breadcrumb-item text-white-50">ARITIM Wins 4th Environmental Award</li>
+    </ol>
+  </div>
+</div>
+
+<div class="container py-4 py-md-5">
+  <div class="row g-4">
+    <!-- Main Content -->
+    <div class="col-lg-8">
+      <!-- News Header -->
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start mb-3 gap-2">
+        <div>
+          <span class="badge bg-success d-inline-flex align-items-center">
+            <i class="bi bi-trophy-fill me-1"></i> Award
+          </span>
+          <small class="text-muted d-block mt-1 d-sm-inline-block ms-sm-2">
+            <i class="bi bi-calendar-event me-1"></i> 15 Dec 2024
+          </small>
+        </div>
+        <span class="text-muted small d-flex align-items-center">
+          <i class="bi bi-clock me-1"></i> 3 min read
+        </span>
+      </div>
+
+      <!-- Featured Image -->
+      <div class="ratio ratio-16x9 bg-light border rounded-3 mb-4 d-flex align-items-center justify-content-center text-muted">
+        <div class="text-center px-3">
+          <i class="bi bi-award fs-1 mb-2 text-warning"></i>
+          <div class="small">🏆 Environmental Award Ceremony – Istanbul, 2024</div>
+        </div>
+      </div>
+
+      <!-- News Title -->
+      <h1 class="mb-4">ARITIM Wins 4th Environmental Award for CARETTA® Technology Innovation</h1>
+
+      <!-- News Body -->
+      <div class="news-content">
+        <p class="lead">
+          <strong>ISTANBUL, December 15, 2024</strong> — ARITIM Mühendislik has been honored with its <strong>4th Environmental Excellence Award</strong> by the Turkish Chamber of Environmental Engineers, recognizing its pioneering role in sustainable water treatment solutions across the MENA region.
+        </p>
+
+        <p>
+          The award specifically highlights the successful deployment of ARITIM’s patented <strong>CARETTA® Water Treatment Technology</strong> in over 120 projects during 2023–2024, including municipal plants in Turkey, desalination facilities in Cyprus and Pakistan, and industrial reuse systems in Egypt and Iraq.
+        </p>
+
+        <blockquote class="blockquote border-start border-3 border-primary ps-3 my-4">
+          <p class="mb-0 fst-italic">
+            "CARETTA® represents our commitment to modular, energy-efficient, and chemical-minimized treatment — without compromising performance."
+          </p>
+          <footer class="blockquote-footer mt-1">— Eng. Mehmet Yılmaz, R&D Director, ARITIM</footer>
+        </blockquote>
+
+        <h3 class="mt-5 mb-3">Key Achievements Behind the Award</h3>
+        <ul>
+          <li>✅ Deployment of <strong>29,000 m³/day WWTP</strong> in <strong>Bolu Municipality</strong> (funded by Islamic Development Bank)</li>
+          <li>✅ Completion of <strong>1,000 m³/day RO plant</strong> for <strong>East Mediterranean University, Cyprus</strong></li>
+          <li>✅ <strong>54 turnkey systems</strong> delivered across <strong>Baghdad & Basra settlements</strong></li>
+          <li>✅ <strong>Zero chemical discharge</strong> in textile reuse using <strong>CARETTA® + RO hybrid</strong></li>
+        </ul>
+
+        <h3 class="mt-5 mb-3">Partnership Impact</h3>
+        <p>
+          ARITIM’s success extends through its regional partners, including <strong>Green Zag Co.</strong> in Qatar — which represented ARITIM in the <strong>Ebic RO Plant (700 m³/day)</strong> and <strong>Abo Zaabal Cooling System Upgrade</strong> in Egypt.
+        </p>
+
+        <div class="alert alert-info mt-4">
+          <i class="bi bi-lightbulb me-2"></i>
+          <strong>Did you know?</strong> CARETTA® is a registered trademark of ARITIM, covering modular units that reduce land use by 40% and energy by 25% vs. conventional systems.
+        </div>
+
+        <h3 class="mt-5 mb-3">Looking Ahead</h3>
+        <p>
+          In 2025, ARITIM plans to expand CARETTA® applications to:
+        </p>
+        <ul>
+          <li>🌊 Desalination + energy recovery in Gulf projects</li>
+          <li>♻️ Zero Liquid Discharge (ZLD) for textile & metal industries</li>
+          <li>🌱 Rural decentralized treatment in Central Asia</li>
+        </ul>
+
+        <hr class="my-5">
+
+        <!-- Tags -->
+        <div class="mb-4">
+          <span class="badge bg-light text-dark me-2">ARITIM</span>
+          <span class="badge bg-light text-dark me-2">CARETTA®</span>
+          <span class="badge bg-light text-dark me-2">Environmental Award</span>
+          <span class="badge bg-light text-dark">Green Zag</span>
+        </div>
+      </div>
+
+      <!-- Social & Share -->
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 mt-5 pt-3 border-top">
+        <div class="d-flex flex-wrap gap-2">
+          <a href="#" class="btn btn-outline-primary btn-sm">
+            <i class="bi bi-linkedin me-1"></i> Share on LinkedIn
+          </a>
+          <a href="#" class="btn btn-outline-secondary btn-sm">
+            <i class="bi bi-envelope me-1"></i> Email
+          </a>
+        </div>
+        <a href="{% url 'news:news' %}" class="btn btn-outline-dark btn-sm">
+          ← Back to News
+        </a>
+      </div>
+    </div>
+
+    <!-- Sidebar (moves below on mobile) -->
+    <div class="col-lg-4">
+      <div class="sidebar-wrapper">
+        <h5 class="mb-4 pb-2 border-bottom">Related News</h5>
+
+        <!-- Related Items -->
+        <div class="d-flex mb-4 hover-lift">
+          <div class="icon-circle bg-gradient-water text-white me-3 flex-shrink-0">
+            <i class="bi bi-droplet-half"></i>
+          </div>
+          <div>
+            <small class="text-muted d-block"><i class="bi bi-calendar-event me-1"></i> 03 Nov 2024</small>
+            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none">1,000 m³/day RO Plant in Cyprus</a></h6>
+            <span class="badge bg-primary small"><i class="bi bi-droplet-fill me-1"></i> Project</span>
+          </div>
+        </div>
+
+        <div class="d-flex mb-4 hover-lift">
+          <div class="icon-circle bg-gradient-partnership text-white me-3 flex-shrink-0">
+            <i class="bi bi-hand-thumbs-up"></i>
+          </div>
+          <div>
+            <small class="text-muted d-block"><i class="bi bi-calendar-event me-1"></i> 28 Oct 2024</small>
+            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none">Green Zag & Demir Metal Projects</a></h6>
+            <span class="badge bg-info small"><i class="bi bi-link-45deg me-1"></i> Partnership</span>
+          </div>
+        </div>
+
+        <div class="d-flex hover-lift">
+          <div class="icon-circle bg-gradient-municipal text-white me-3 flex-shrink-0">
+            <i class="bi bi-building"></i>
+          </div>
+          <div>
+            <small class="text-muted d-block"><i class="bi bi-calendar-event me-1"></i> 12 Sep 2024</small>
+            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none">29,000 m³/day WWTP in Bolu</a></h6>
+            <span class="badge bg-secondary small"><i class="bi bi-building me-1"></i> Municipality</span>
+          </div>
+        </div>
+
+        <!-- Newsletter CTA -->
+        <div class="mt-5 p-4 bg-light rounded-3">
+          <div class="icon-circle bg-gradient-tech text-white mx-auto mb-3" style="width:60px; height:60px;">
+            <i class="bi bi-megaphone"></i>
+          </div>
+          <h6 class="text-center mb-3">Stay Updated</h6>
+          <p class="small text-muted text-center mb-3">Get notified about projects & awards.</p>
+          <form class="d-flex gap-2">
+            <input type="email" class="form-control form-control-sm flex-grow-1" placeholder="Email">
+            <button class="btn btn-primary btn-sm" type="submit">Go</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Mobile-First Responsive Styling */
+  .news-content h3 {
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 1.375rem;
+  }
+  .news-content p {
+    line-height: 1.7;
+    color: #555;
+  }
+  .news-content ul {
+    padding-left: 1.25rem;
+  }
+  .news-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Hover Effects — Desktop only */
+  @media (hover: hover) and (pointer: fine) {
+    .hover-lift {
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border-radius: 8px;
+    }
+    .hover-lift:hover {
+      transform: translateX(6px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    }
+
+    .icon-circle {
+      transition: all 0.3s ease;
+    }
+    .hover-lift:hover .icon-circle {
+      transform: scale(1.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+  }
+
+  /* Sidebar on mobile: no sticky, better padding */
+  @media (max-width: 991.98px) {
+    .sidebar-wrapper {
+      margin-top: 2rem;
+    }
+  }
+
+  /* Extra small devices */
+  @media (max-width: 575.98px) {
+    .news-content h3 { font-size: 1.25rem; }
+    .blockquote { font-size: 0.95rem; }
+    .alert { font-size: 0.9rem; }
+    .badge { font-size: 0.75rem; }
+  }
+
+  /* Icon Circle Base */
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  }
+
+  /* Gradients */
+  .bg-gradient-success { background: linear-gradient(135deg, #20c997, #198754); }
+  .bg-gradient-water { background: linear-gradient(135deg, #0d6efd, #0dcaf0); }
+  .bg-gradient-partnership { background: linear-gradient(135deg, #6610f2, #0d6efd); }
+  .bg-gradient-municipal { background: linear-gradient(135deg, #6c757d, #adb5bd); }
+  .bg-gradient-tech { background: linear-gradient(135deg, #e53935, #ff9e80); }
+
+  /* Prevent overflow */
+  body { overflow-x: hidden; }
+</style>
+
+{% endblock %}

@@ -1,0 +1,249 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<!-- Breadcrumbs -->
+<div class="breadcrumbs d-flex align-items-center" style="background-image: url('{% static 'assets/img/breadcrumbs-bg.jpg' %}');">
+  <div class="container position-relative d-flex flex-column align-items-center" data-scroll-fade>
+    <h2 class="text-white">Latest News</h2>
+    <ol class="breadcrumb mb-0" style="--bs-breadcrumb-divider: '>';">
+      <li class="breadcrumb-item"><a href="/" class="text-white">Home</a></li>
+      <li class="breadcrumb-item text-white-50">News</li>
+    </ol>
+  </div>
+</div>
+
+<div class="container py-4 py-md-5">
+  <div class="text-center mb-4 mb-md-5">
+    <h1 class="mb-3">Our Latest Updates</h1>
+    <p class="text-muted mx-auto" style="max-width: 768px;">
+      Follow our latest projects, partnerships, awards, and technological advancements — updated regularly.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <!-- News 1: Award -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card h-100 shadow-sm border-0 hover-lift">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-start mb-2 mb-sm-3">
+            <small class="text-muted d-flex align-items-center">
+              <i class="bi bi-calendar-event me-1 fs-6"></i> 15 Dec 2024
+            </small>
+            <span class="badge bg-success d-flex align-items-center">
+              <i class="bi bi-trophy-fill me-1 fs-6"></i> Award
+            </span>
+          </div>
+          <div class="text-center mb-3">
+            <div class="icon-circle bg-gradient-success text-white mx-auto">
+              <i class="bi bi-award"></i>
+            </div>
+          </div>
+          <h5 class="card-title h6 h5-md mb-2">ARITIM Wins 4th Environmental Award</h5>
+          <p class="card-text text-muted small flex-grow-1 mb-3">
+            Recognized for innovation in sustainable water treatment and CARETTA® technology deployment across MENA region.
+          </p>
+          <a href="{% url 'news:news_detail' %}" class="text-primary text-decoration-none small mt-auto fw-bold d-inline-flex align-items-center">
+            Read more <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- News 2: Cyprus RO Project -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card h-100 shadow-sm border-0 hover-lift">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-start mb-2 mb-sm-3">
+            <small class="text-muted d-flex align-items-center">
+              <i class="bi bi-calendar-event me-1 fs-6"></i> 03 Nov 2024
+            </small>
+            <span class="badge bg-primary d-flex align-items-center">
+              <i class="bi bi-droplet-fill me-1 fs-6"></i> Project
+            </span>
+          </div>
+          <div class="text-center mb-3">
+            <div class="icon-circle bg-gradient-water text-white mx-auto">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+          </div>
+          <h5 class="card-title h6 h5-md mb-2">1,000 m³/day RO Plant Completed in Cyprus</h5>
+          <p class="card-text text-muted small flex-grow-1 mb-3">
+            Delivered for East Mediterranean University — seawater desalination using energy-recovery RO system.
+          </p>
+          <a href="#" class="text-primary text-decoration-none small mt-auto fw-bold d-inline-flex align-items-center">
+            Read more <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- News 3: Green Zag Partnership -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card h-100 shadow-sm border-0 hover-lift">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-start mb-2 mb-sm-3">
+            <small class="text-muted d-flex align-items-center">
+              <i class="bi bi-calendar-event me-1 fs-6"></i> 28 Oct 2024
+            </small>
+            <span class="badge bg-info d-flex align-items-center">
+              <i class="bi bi-link-45deg me-1 fs-6"></i> Partnership
+            </span>
+          </div>
+          <div class="text-center mb-3">
+            <div class="icon-circle bg-gradient-partnership text-white mx-auto">
+              <i class="bi bi-hand-thumbs-up"></i>
+            </div>
+          </div>
+          <h5 class="card-title h6 h5-md mb-2">Green Zag & Demir Metal: New Steel Projects in Qatar</h5>
+          <p class="card-text text-muted small flex-grow-1 mb-3">
+            Joint delivery of structural steel for Ebic RO plant and Abo Zaabal cooling system upgrades.
+          </p>
+          <a href="#" class="text-primary text-decoration-none small mt-auto fw-bold d-inline-flex align-items-center">
+            Read more <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- News 4: Bolu WWTP -->
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="card h-100 shadow-sm border-0 hover-lift">
+        <div class="card-body d-flex flex-column">
+          <div class="d-flex justify-content-between align-items-start mb-2 mb-sm-3">
+            <small class="text-muted d-flex align-items-center">
+              <i class="bi bi-calendar-event me-1 fs-6"></i> 12 Sep 2024
+            </small>
+            <span class="badge bg-secondary d-flex align-items-center">
+              <i class="bi bi-building me-1 fs-6"></i> Municipality
+            </span>
+          </div>
+          <div class="text-center mb-3">
+            <div class="icon-circle bg-gradient-municipal text-white mx-auto">
+              <i class="bi bi-building"></i>
+            </div>
+          </div>
+          <h5 class="card-title h6 h5-md mb-2">29,000 m³/day WWTP Launched in Bolu</h5>
+          <p class="card-text text-muted small flex-grow-1 mb-3">
+            Advanced biological treatment system funded by Islamic Development Bank — now operational.
+          </p>
+          <a href="#" class="text-primary text-decoration-none small mt-auto fw-bold d-inline-flex align-items-center">
+            Read more <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter Section -->
+  <div class="row justify-content-center mt-4 mt-md-5">
+    <div class="col-12 col-lg-8">
+      <div class="p-4 p-md-5 bg-light rounded-3 text-center">
+        <div class="icon-circle bg-gradient-tech text-white mx-auto mb-3" style="width:72px; height:72px;">
+          <i class="bi bi-megaphone"></i>
+        </div>
+        <h4 class="mb-3">Stay Updated</h4>
+        <p class="text-muted mb-4">
+          Subscribe to our newsletter and receive project updates, technical insights, and industry news.
+        </p>
+        <form class="d-flex flex-column flex-sm-row gap-2 justify-content-center align-items-center">
+          <input 
+            type="email" 
+            class="form-control flex-grow-1" 
+            placeholder="Your email address"
+            aria-label="Email address"
+          >
+          <button type="submit" class="btn btn-primary w-100 w-sm-auto">Subscribe</button>
+        </form>
+        <small class="text-muted d-block mt-3">
+          We respect your privacy. Unsubscribe anytime.
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Mobile-First Responsive Styling */
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* Disable hover on touch devices */
+  @media (hover: hover) and (pointer: fine) {
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    }
+    .hover-lift:hover .icon-circle {
+      transform: scale(1.12) rotate(4deg);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    .h5-md { font-size: 1.125rem; }
+  }
+
+  .icon-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+  }
+
+  /* On extra-small (e.g., iPhone SE) */
+  @media (max-width: 575.98px) {
+    .container { padding-left: 1rem; padding-right: 1rem; }
+    .icon-circle { width: 60px; height: 60px; font-size: 1.5rem; }
+    .card-title { font-size: 1rem !important; }
+    p.small { font-size: 0.875rem; }
+    .badge { font-size: 0.75rem; padding: 0.35em 0.6em; }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .py-4 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .col-lg-3 { flex: 0 0 24%; max-width: 24%; }
+  }
+
+  /* Extra large (1400px+) — prevent too much whitespace */
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1320px;
+    }
+  }
+
+  /* Gradients */
+  .bg-gradient-success { background: linear-gradient(135deg, #20c997, #198754); }
+  .bg-gradient-water { background: linear-gradient(135deg, #0d6efd, #0dcaf0); }
+  .bg-gradient-partnership { background: linear-gradient(135deg, #6610f2, #0d6efd); }
+  .bg-gradient-municipal { background: linear-gradient(135deg, #6c757d, #adb5bd); }
+  .bg-gradient-tech { background: linear-gradient(135deg, #e53935, #ff9e80); }
+
+  .badge {
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+    border-radius: 6px;
+    font-size: 0.8rem;
+  }
+
+  /* Ensure no horizontal overflow */
+  body { overflow-x: hidden; }
+  .card { min-height: 100%; display: flex; flex-direction: column; }
+  .card-body { flex: 1; }
+</style>
+
+{% endblock %}
