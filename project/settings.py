@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'partners',
     'contact',
     'news',
+    'cloudinary',
+
 
     
 
