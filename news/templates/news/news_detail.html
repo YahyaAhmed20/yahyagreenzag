@@ -19,12 +19,12 @@
     <!-- Main Content -->
     <div class="col-lg-8">
       <!-- News Header -->
-      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start mb-3 gap-2">
-        <div>
-          <span class="badge bg-success d-inline-flex align-items-center">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start mb-3 gap-2" data-scroll-slide-up>
+        <div class="d-flex flex-wrap align-items-center gap-2">
+          <span class="badge bg-success d-inline-flex align-items-center px-3 py-1">
             <i class="bi bi-trophy-fill me-1"></i> Award
           </span>
-          <small class="text-muted d-block mt-1 d-sm-inline-block ms-sm-2">
+          <small class="text-muted d-flex align-items-center">
             <i class="bi bi-calendar-event me-1"></i> 15 Dec 2024
           </small>
         </div>
@@ -34,7 +34,7 @@
       </div>
 
       <!-- Featured Image -->
-      <div class="ratio ratio-16x9 bg-light border rounded-3 mb-4 d-flex align-items-center justify-content-center text-muted">
+      <div class="ratio ratio-16x9 bg-light border rounded-3 mb-4 d-flex align-items-center justify-content-center text-muted" data-scroll-fade>
         <div class="text-center px-3">
           <i class="bi bi-award fs-1 mb-2 text-warning"></i>
           <div class="small">🏆 Environmental Award Ceremony – Istanbul, 2024</div>
@@ -42,10 +42,10 @@
       </div>
 
       <!-- News Title -->
-      <h1 class="mb-4">ARITIM Wins 4th Environmental Award for CARETTA® Technology Innovation</h1>
+      <h1 class="mb-4" data-scroll-slide-up>ARITIM Wins 4th Environmental Award for CARETTA® Technology Innovation</h1>
 
       <!-- News Body -->
-      <div class="news-content">
+      <div class="news-content" data-scroll-slide-up>
         <p class="lead">
           <strong>ISTANBUL, December 15, 2024</strong> — ARITIM Mühendislik has been honored with its <strong>4th Environmental Excellence Award</strong> by the Turkish Chamber of Environmental Engineers, recognizing its pioneering role in sustainable water treatment solutions across the MENA region.
         </p>
@@ -93,32 +93,32 @@
 
         <!-- Tags -->
         <div class="mb-4">
-          <span class="badge bg-light text-dark me-2">ARITIM</span>
-          <span class="badge bg-light text-dark me-2">CARETTA®</span>
-          <span class="badge bg-light text-dark me-2">Environmental Award</span>
-          <span class="badge bg-light text-dark">Green Zag</span>
+          <span class="badge bg-light text-dark rounded-pill px-3 py-1 me-2">ARITIM</span>
+          <span class="badge bg-light text-dark rounded-pill px-3 py-1 me-2">CARETTA®</span>
+          <span class="badge bg-light text-dark rounded-pill px-3 py-1 me-2">Environmental Award</span>
+          <span class="badge bg-light text-dark rounded-pill px-3 py-1">Green Zag</span>
         </div>
       </div>
 
       <!-- Social & Share -->
-      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 mt-5 pt-3 border-top">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 mt-5 pt-3 border-top" data-scroll-fade>
         <div class="d-flex flex-wrap gap-2">
-          <a href="#" class="btn btn-outline-primary btn-sm">
+          <a href="#" class="btn btn-outline-primary btn-sm px-3">
             <i class="bi bi-linkedin me-1"></i> Share on LinkedIn
           </a>
-          <a href="#" class="btn btn-outline-secondary btn-sm">
+          <a href="#" class="btn btn-outline-secondary btn-sm px-3">
             <i class="bi bi-envelope me-1"></i> Email
           </a>
         </div>
-        <a href="{% url 'news:news' %}" class="btn btn-outline-dark btn-sm">
+        <a href="{% url 'news:news' %}" class="btn btn-outline-dark btn-sm px-3">
           ← Back to News
         </a>
       </div>
     </div>
 
-    <!-- Sidebar (moves below on mobile) -->
+    <!-- Sidebar -->
     <div class="col-lg-4">
-      <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper" data-scroll-fade>
         <h5 class="mb-4 pb-2 border-bottom">Related News</h5>
 
         <!-- Related Items -->
@@ -128,8 +128,8 @@
           </div>
           <div>
             <small class="text-muted d-block"><i class="bi bi-calendar-event me-1"></i> 03 Nov 2024</small>
-            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none">1,000 m³/day RO Plant in Cyprus</a></h6>
-            <span class="badge bg-primary small"><i class="bi bi-droplet-fill me-1"></i> Project</span>
+            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none text-dark hover-underline">1,000 m³/day RO Plant in Cyprus</a></h6>
+            <span class="badge bg-primary rounded-pill small px-2 py-1"><i class="bi bi-droplet-fill me-1"></i> Project</span>
           </div>
         </div>
 
@@ -139,8 +139,8 @@
           </div>
           <div>
             <small class="text-muted d-block"><i class="bi bi-calendar-event me-1"></i> 28 Oct 2024</small>
-            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none">Green Zag & Demir Metal Projects</a></h6>
-            <span class="badge bg-info small"><i class="bi bi-link-45deg me-1"></i> Partnership</span>
+            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none text-dark hover-underline">Green Zag & Demir Metal Projects</a></h6>
+            <span class="badge bg-info rounded-pill small px-2 py-1"><i class="bi bi-link-45deg me-1"></i> Partnership</span>
           </div>
         </div>
 
@@ -150,21 +150,21 @@
           </div>
           <div>
             <small class="text-muted d-block"><i class="bi bi-calendar-event me-1"></i> 12 Sep 2024</small>
-            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none">29,000 m³/day WWTP in Bolu</a></h6>
-            <span class="badge bg-secondary small"><i class="bi bi-building me-1"></i> Municipality</span>
+            <h6 class="mb-1 fs-6"><a href="#" class="text-decoration-none text-dark hover-underline">29,000 m³/day WWTP in Bolu</a></h6>
+            <span class="badge bg-secondary rounded-pill small px-2 py-1"><i class="bi bi-building me-1"></i> Municipality</span>
           </div>
         </div>
 
         <!-- Newsletter CTA -->
-        <div class="mt-5 p-4 bg-light rounded-3">
+        <div class="mt-5 p-4 bg-light rounded-3 shadow-sm">
           <div class="icon-circle bg-gradient-tech text-white mx-auto mb-3" style="width:60px; height:60px;">
             <i class="bi bi-megaphone"></i>
           </div>
           <h6 class="text-center mb-3">Stay Updated</h6>
           <p class="small text-muted text-center mb-3">Get notified about projects & awards.</p>
           <form class="d-flex gap-2">
-            <input type="email" class="form-control form-control-sm flex-grow-1" placeholder="Email">
-            <button class="btn btn-primary btn-sm" type="submit">Go</button>
+            <input type="email" class="form-control form-control-sm flex-grow-1 rounded-2" placeholder="Email" required>
+            <button class="btn btn-primary btn-sm rounded-2 px-3" type="submit">Go</button>
           </form>
         </div>
       </div>
@@ -173,79 +173,187 @@
 </div>
 
 <style>
-  /* Mobile-First Responsive Styling */
-  .news-content h3 {
-    font-weight: 700;
-    color: #2d3748;
-    font-size: 1.375rem;
-  }
-  .news-content p {
-    line-height: 1.7;
-    color: #555;
-  }
-  .news-content ul {
-    padding-left: 1.25rem;
-  }
-  .news-content li {
-    margin-bottom: 0.5rem;
+/* ===== Enhanced Design System (8px grid + Tailwind-inspired) ===== */
+/* Scroll-Based Animations */
+[data-scroll-fade],
+[data-scroll-slide-up] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-scroll-fade].animate,
+[data-scroll-slide-up].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Lift — Desktop Only (Respect touch devices) */
+.hover-lift {
+  border-radius: 12px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover-lift:hover {
+    transform: translateX(6px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   }
 
-  /* Hover Effects — Desktop only */
-  @media (hover: hover) and (pointer: fine) {
-    .hover-lift {
-      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      border-radius: 8px;
-    }
-    .hover-lift:hover {
-      transform: translateX(6px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-    }
-
-    .icon-circle {
-      transition: all 0.3s ease;
-    }
-    .hover-lift:hover .icon-circle {
-      transform: scale(1.08);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-  }
-
-  /* Sidebar on mobile: no sticky, better padding */
-  @media (max-width: 991.98px) {
-    .sidebar-wrapper {
-      margin-top: 2rem;
-    }
-  }
-
-  /* Extra small devices */
-  @media (max-width: 575.98px) {
-    .news-content h3 { font-size: 1.25rem; }
-    .blockquote { font-size: 0.95rem; }
-    .alert { font-size: 0.9rem; }
-    .badge { font-size: 0.75rem; }
-  }
-
-  /* Icon Circle Base */
   .icon-circle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .hover-lift:hover .icon-circle {
+    transform: scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 
-  /* Gradients */
-  .bg-gradient-success { background: linear-gradient(135deg, #20c997, #198754); }
-  .bg-gradient-water { background: linear-gradient(135deg, #0d6efd, #0dcaf0); }
-  .bg-gradient-partnership { background: linear-gradient(135deg, #6610f2, #0d6efd); }
-  .bg-gradient-municipal { background: linear-gradient(135deg, #6c757d, #adb5bd); }
-  .bg-gradient-tech { background: linear-gradient(135deg, #e53935, #ff9e80); }
+  .hover-underline {
+    text-decoration: none !important;
+  }
+  .hover-underline:hover {
+    text-decoration: underline !important;
+  }
+}
 
-  /* Prevent overflow */
-  body { overflow-x: hidden; }
+/* News Content Typography */
+.news-content h3 {
+  font-weight: 700;
+  color: #2d3748;
+  font-size: 1.375rem;
+  margin-top: 40px;
+}
+
+.news-content p {
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 1.25rem;
+}
+
+.news-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.news-content li {
+  margin-bottom: 0.625rem;
+}
+
+/* Blockquote */
+.blockquote {
+  background-color: #f8f9fa;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 3px solid #0d6efd !important;
+}
+.blockquote-footer {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+/* Alerts & Badges */
+.alert {
+  border-radius: 8px;
+}
+.badge.rounded-pill {
+  border-radius: 50rem;
+}
+
+/* Spacing (8px Base) */
+.py-4 { padding-top: 32px !important; padding-bottom: 32px !important; }
+.py-md-5 { padding-top: 48px !important; padding-bottom: 48px !important; }
+.my-5 { margin-top: 48px !important; margin-bottom: 48px !important; }
+.mt-5 { margin-top: 48px !important; }
+.mb-4 { margin-bottom: 32px !important; }
+
+/* Icon Circle */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Gradients (Harmonized) */
+.bg-gradient-success { background: linear-gradient(135deg, #198754, #20c997); }
+.bg-gradient-water { background: linear-gradient(135deg, #0d6efd, #0dcaf0); }
+.bg-gradient-partnership { background: linear-gradient(135deg, #6f42c1, #0d6efd); }
+.bg-gradient-municipal { background: linear-gradient(135deg, #6c757d, #adb5bd); }
+.bg-gradient-tech { background: linear-gradient(135deg, #e53935, #ff9e80); }
+
+/* Buttons */
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+.btn-outline-primary:hover,
+.btn-outline-secondary:hover,
+.btn-outline-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Sidebar */
+@media (max-width: 991.98px) {
+  .sidebar-wrapper {
+    margin-top: 32px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 575.98px) {
+  .news-content h3 { font-size: 1.25rem; }
+  .blockquote { font-size: 0.95rem; padding: 1rem; }
+  .icon-circle { width: 44px; height: 44px; font-size: 1.25rem; }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .icon-circle,
+  [data-scroll-fade],
+  [data-scroll-slide-up] {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Layout Safety */
+body { overflow-x: hidden; }
 </style>
+
+<script>
+// Lightweight Scroll Observer + Reduced Motion Respect
+document.addEventListener('DOMContentLoaded', function () {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    document.querySelectorAll('[data-scroll-fade], [data-scroll-slide-up]').forEach(el => {
+      el.classList.add('animate');
+    });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, {
+    rootMargin: '0px',
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('[data-scroll-fade], [data-scroll-slide-up]').forEach(el => {
+    observer.observe(el);
+  });
+});
+</script>
 
 {% endblock %}

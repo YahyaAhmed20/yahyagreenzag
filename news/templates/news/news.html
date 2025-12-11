@@ -14,7 +14,7 @@
 </div>
 
 <div class="container py-4 py-md-5">
-  <div class="text-center mb-4 mb-md-5">
+  <div class="text-center mb-4 mb-md-5" data-scroll-slide-up>
     <h1 class="mb-3">Our Latest Updates</h1>
     <p class="text-muted mx-auto" style="max-width: 768px;">
       Follow our latest projects, partnerships, awards, and technological advancements — updated regularly.
@@ -23,10 +23,10 @@
 
   <div class="row g-4">
     <!-- News 1: Award -->
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-3" data-scroll-slide-up>
       <div class="card h-100 shadow-sm border-0 hover-lift">
         <div class="card-body d-flex flex-column">
-          <div class="d-flex justify-content-between align-items-start mb-2 mb-sm-3">
+          <div class="d-flex justify-content-between align-items-start mb-3">
             <small class="text-muted d-flex align-items-center">
               <i class="bi bi-calendar-event me-1 fs-6"></i> 15 Dec 2024
             </small>
@@ -51,10 +51,10 @@
     </div>
 
     <!-- News 2: Cyprus RO Project -->
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-3" data-scroll-slide-up>
       <div class="card h-100 shadow-sm border-0 hover-lift">
         <div class="card-body d-flex flex-column">
-          <div class="d-flex justify-content-between align-items-start mb-2 mb-sm-3">
+          <div class="d-flex justify-content-between align-items-start mb-3">
             <small class="text-muted d-flex align-items-center">
               <i class="bi bi-calendar-event me-1 fs-6"></i> 03 Nov 2024
             </small>
@@ -79,10 +79,10 @@
     </div>
 
     <!-- News 3: Green Zag Partnership -->
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-3" data-scroll-slide-up>
       <div class="card h-100 shadow-sm border-0 hover-lift">
         <div class="card-body d-flex flex-column">
-          <div class="d-flex justify-content-between align-items-start mb-2 mb-sm-3">
+          <div class="d-flex justify-content-between align-items-start mb-3">
             <small class="text-muted d-flex align-items-center">
               <i class="bi bi-calendar-event me-1 fs-6"></i> 28 Oct 2024
             </small>
@@ -107,10 +107,10 @@
     </div>
 
     <!-- News 4: Bolu WWTP -->
-    <div class="col-12 col-sm-6 col-lg-3">
+    <div class="col-12 col-sm-6 col-lg-3" data-scroll-slide-up>
       <div class="card h-100 shadow-sm border-0 hover-lift">
         <div class="card-body d-flex flex-column">
-          <div class="d-flex justify-content-between align-items-start mb-2 mb-sm-3">
+          <div class="d-flex justify-content-between align-items-start mb-3">
             <small class="text-muted d-flex align-items-center">
               <i class="bi bi-calendar-event me-1 fs-6"></i> 12 Sep 2024
             </small>
@@ -136,9 +136,9 @@
   </div>
 
   <!-- Newsletter Section -->
-  <div class="row justify-content-center mt-4 mt-md-5">
-    <div class="col-12 col-lg-8">
-      <div class="p-4 p-md-5 bg-light rounded-3 text-center">
+  <div class="row justify-content-center mt-5 pt-4 border-top">
+    <div class="col-12 col-lg-8" data-scroll-fade>
+      <div class="p-4 p-md-5 bg-light rounded-3 text-center shadow-sm">
         <div class="icon-circle bg-gradient-tech text-white mx-auto mb-3" style="width:72px; height:72px;">
           <i class="bi bi-megaphone"></i>
         </div>
@@ -152,8 +152,9 @@
             class="form-control flex-grow-1" 
             placeholder="Your email address"
             aria-label="Email address"
+            required
           >
-          <button type="submit" class="btn btn-primary w-100 w-sm-auto">Subscribe</button>
+          <button type="submit" class="btn btn-primary w-100 w-sm-auto px-4">Subscribe</button>
         </form>
         <small class="text-muted d-block mt-3">
           We respect your privacy. Unsubscribe anytime.
@@ -164,86 +165,174 @@
 </div>
 
 <style>
-  /* Mobile-First Responsive Styling */
-  .hover-lift {
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 12px;
-    overflow: hidden;
+/* ===== Enhanced Design System (8px grid, Tailwind-inspired) ===== */
+/* Scroll Animations */
+[data-scroll-fade],
+[data-scroll-slide-up] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-scroll-fade].animate,
+[data-scroll-slide-up].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover Lift & Icon Animation */
+.hover-lift {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 12px 30px -6px rgba(0, 0, 0, 0.12),
+              0 8px 12px rgba(0, 0, 0, 0.06);
+}
+
+.icon-circle {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              box-shadow 0.4s ease;
+}
+
+.hover-lift:hover .icon-circle {
+  transform: scale(1.12) rotate(3deg);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Prefers-Reduced-Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .hover-lift,
+  .icon-circle,
+  [data-scroll-fade],
+  [data-scroll-slide-up] {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
   }
+}
 
-  /* Disable hover on touch devices */
-  @media (hover: hover) and (pointer: fine) {
-    .hover-lift:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    }
-    .hover-lift:hover .icon-circle {
-      transform: scale(1.12) rotate(4deg);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    }
-  }
+/* Typography & Spacing (8px base) */
+.py-4 { padding-top: 32px !important; padding-bottom: 32px !important; }
+.py-md-5 { padding-top: 48px !important; padding-bottom: 48px !important; }
+.mt-5 { margin-top: 48px !important; }
+.pt-4 { padding-top: 32px !important; }
+.mb-3, .my-3 { margin-bottom: 24px !important; }
+.mb-4, .my-4 { margin-bottom: 32px !important; }
 
-  /* Small devices (landscape phones, 576px and up) */
-  @media (min-width: 576px) {
-    .h5-md { font-size: 1.125rem; }
-  }
+/* Responsive Adjustments */
+@media (min-width: 576px) {
+  .h5-md { font-size: 1.125rem; }
+}
 
-  .icon-circle {
-    width: 68px;
-    height: 68px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.75rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-  }
-
-  /* On extra-small (e.g., iPhone SE) */
-  @media (max-width: 575.98px) {
-    .container { padding-left: 1rem; padding-right: 1rem; }
-    .icon-circle { width: 60px; height: 60px; font-size: 1.5rem; }
-    .card-title { font-size: 1rem !important; }
-    p.small { font-size: 0.875rem; }
-    .badge { font-size: 0.75rem; padding: 0.35em 0.6em; }
-  }
-
-  /* Medium devices (tablets, 768px and up) */
-  @media (min-width: 768px) {
-    .py-4 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
-  }
-
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
-    .col-lg-3 { flex: 0 0 24%; max-width: 24%; }
-  }
-
-  /* Extra large (1400px+) — prevent too much whitespace */
-  @media (min-width: 1400px) {
-    .container {
-      max-width: 1320px;
-    }
-  }
-
-  /* Gradients */
-  .bg-gradient-success { background: linear-gradient(135deg, #20c997, #198754); }
-  .bg-gradient-water { background: linear-gradient(135deg, #0d6efd, #0dcaf0); }
-  .bg-gradient-partnership { background: linear-gradient(135deg, #6610f2, #0d6efd); }
-  .bg-gradient-municipal { background: linear-gradient(135deg, #6c757d, #adb5bd); }
-  .bg-gradient-tech { background: linear-gradient(135deg, #e53935, #ff9e80); }
-
+@media (max-width: 575.98px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+  .icon-circle { width: 60px; height: 60px; font-size: 1.5rem; }
+  .card-title { font-size: 1rem !important; }
+  .card-text { font-size: 0.875rem; }
   .badge {
-    font-weight: 600;
-    padding: 0.4em 0.8em;
-    border-radius: 6px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    padding: 0.35em 0.6em;
+  }
+}
+
+/* Gradients (Enhanced Harmony) */
+.bg-gradient-success { background: linear-gradient(135deg, #198754, #20c997); }
+.bg-gradient-water { background: linear-gradient(135deg, #0d6efd, #0dcaf0); }
+.bg-gradient-partnership { background: linear-gradient(135deg, #6f42c1, #0d6efd); }
+.bg-gradient-municipal { background: linear-gradient(135deg, #6c757d, #adb5bd); }
+.bg-gradient-tech { background: linear-gradient(135deg, #e53935, #ff9e80); }
+
+/* Badges & Links */
+.badge {
+  font-weight: 600;
+  padding: 0.4em 0.8em;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+a.text-primary:hover {
+  text-decoration: underline !important;
+}
+
+/* Newsletter Form */
+.form-control {
+  border-radius: 8px;
+  padding: 0.625rem 1rem;
+  min-height: 44px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+  border-color: #86b7fe;
+}
+
+.btn-primary {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* Ensure layout integrity */
+body { overflow-x: hidden; }
+.card { 
+  min-height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  height: 100%; 
+}
+.card-body { 
+  flex: 1; 
+}
+</style>
+
+<script>
+// Lightweight Scroll Animation + Reduced Motion Respect
+document.addEventListener('DOMContentLoaded', function () {
+  // Respect user preference
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    document.querySelectorAll('[data-scroll-fade], [data-scroll-slide-up]').forEach(el => {
+      el.classList.add('animate');
+    });
+    return;
   }
 
-  /* Ensure no horizontal overflow */
-  body { overflow-x: hidden; }
-  .card { min-height: 100%; display: flex; flex-direction: column; }
-  .card-body { flex: 1; }
-</style>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        // Optional: unobserve after trigger (performance)
+        // observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: '0px',
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('[data-scroll-fade], [data-scroll-slide-up]').forEach(el => {
+    observer.observe(el);
+  });
+});
+</script>
 
 {% endblock %}

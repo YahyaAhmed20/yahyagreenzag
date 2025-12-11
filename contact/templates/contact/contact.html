@@ -13,7 +13,41 @@
 </div>
 
 <style>
-  /* Mobile-First Responsive Design */
+  /* ===== Scroll-Triggered Animations (CSS-only fallback + JS enhancement) ===== */
+  [data-scroll-fade],
+  [data-scroll-slide],
+  [data-scroll-zoom] {
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Fade-in */
+  [data-scroll-fade].scroll-in {
+    opacity: 1;
+  }
+
+  /* Slide-up */
+  [data-scroll-slide] { transform: translateY(30px); }
+  [data-scroll-slide].scroll-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Zoom-in */
+  [data-scroll-zoom] { transform: scale(0.95); }
+  [data-scroll-zoom].scroll-in {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Stagger delays for cards */
+  [data-scroll-stagger="1"] { transition-delay: 0.1s; }
+  [data-scroll-stagger="2"] { transition-delay: 0.2s; }
+  [data-scroll-stagger="3"] { transition-delay: 0.3s; }
+  [data-scroll-stagger="4"] { transition-delay: 0.4s; }
+
+  /* ===== Core Styling (Enhanced with Tailwind-inspired spacing & polish) ===== */
   .contact-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     padding: 60px 0;
@@ -23,7 +57,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: #2d3748;
-    margin-bottom: 20px;
+    margin-bottom: 24px; /* 3×8 */
     position: relative;
     padding-bottom: 12px;
     line-height: 1.3;
@@ -44,7 +78,7 @@
     color: #6c757d;
     font-size: 1rem;
     line-height: 1.7;
-    margin-bottom: 25px;
+    margin-bottom: 32px; /* 4×8 */
   }
 
   .info-card {
@@ -53,13 +87,14 @@
     padding: 20px;
     margin-bottom: 16px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     border-left: 3px solid transparent;
+    height: 100%;
   }
 
   .info-card:hover {
-    transform: translateX(6px);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.12);
+    transform: translateY(-4px) translateX(8px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
     border-left-color: #667eea;
   }
 
@@ -71,11 +106,11 @@
     justify-content: center;
     border-radius: 10px;
     flex-shrink: 0;
-    transition: all 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .info-card:hover .icon-box {
-    transform: scale(1.08);
+    transform: scale(1.12);
   }
 
   .icon-box.bg-primary-gradient { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
@@ -102,7 +137,7 @@
     color: #667eea;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .info-card a:hover {
@@ -111,7 +146,7 @@
   }
 
   .map-section {
-    margin-top: 30px;
+    margin-top: 40px; /* 5×8 */
   }
 
   .map-section h5 {
@@ -127,14 +162,14 @@
     border-radius: 12px;
     padding: 50px 15px;
     text-align: center;
-    transition: all 0.25s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .map-placeholder:hover {
     background: linear-gradient(135deg, #f3f4f6 0%, #e0e7ff 100%);
     border-color: #667eea;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.08);
+    transform: translateY(-3px) scale(1.01);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.1);
   }
 
   .map-placeholder i {
@@ -162,6 +197,7 @@
     box-shadow: 0 8px 30px rgba(0,0,0,0.06);
     position: relative;
     overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .form-container::before {
@@ -187,14 +223,14 @@
     border: 2px solid #e2e8f0;
     border-radius: 8px;
     padding: 10px 14px;
-    transition: all 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     font-size: 0.95rem;
     min-height: 44px;
   }
 
   .form-control:focus {
     border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.12);
     outline: none;
   }
 
@@ -219,7 +255,7 @@
     border-radius: 50px;
     font-weight: 700;
     font-size: 0.95rem;
-    transition: all 0.25s ease;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     text-transform: uppercase;
     letter-spacing: 0.4px;
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
@@ -230,12 +266,12 @@
 
   .btn-submit:hover {
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
     box-shadow: 0 6px 18px rgba(102, 126, 234, 0.3);
   }
 
   .btn-submit:active {
-    transform: translateY(0);
+    transform: translateY(0) scale(0.99);
   }
 
   .btn-submit i {
@@ -247,10 +283,16 @@
     border: 2px solid #93c5fd;
     border-radius: 10px;
     padding: 16px;
-    margin-top: 20px;
+    margin-top: 24px; /* 3×8 */
     display: flex;
     align-items: flex-start;
     gap: 10px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .privacy-alert:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
   }
 
   .privacy-alert i {
@@ -287,11 +329,11 @@
     100% { background-position: 0% 50%; }
   }
 
-  /* Responsive Adjustments */
+  /* ===== Responsive Design ===== */
   @media (max-width: 767.98px) {
     .contact-section { padding: 40px 15px; }
-    .section-title { font-size: 1.6rem; }
-    .intro-text { font-size: 0.95rem; margin-bottom: 20px; }
+    .section-title { font-size: 1.6rem; margin-bottom: 20px; }
+    .intro-text { font-size: 0.95rem; margin-bottom: 24px; }
     .form-container { padding: 24px 20px; }
     .info-card { padding: 16px; }
     .btn-submit { padding: 12px 24px; font-size: 0.9rem; }
@@ -328,18 +370,15 @@
   .container { max-width: 100%; padding-left: 15px; padding-right: 15px; }
 </style>
 
-<!-- استبدل الـ <div class="container py-3 contact-section"> كله بالكود ده -->
-
 <div class="container py-3 contact-section">
   <div class="row g-4">
-    <!-- ✅ New: Info + Map in Grid (2×2 on desktop) -->
+    <!-- Info + Map -->
     <div class="col-12 col-lg-6">
-      <h3 class="section-title">Get in Touch</h3>
+      <h3 class="section-title" data-scroll-fade>Get in Touch</h3>
       <p class="intro-text">
         We're here to help. Whether you have a question about our services, want to discuss a potential partnership, or need technical support — feel free to reach out. Our team will respond within 24 business hours.
       </p>
 
-      <!-- ✅ Grid: 2 columns on md+, 1 on mobile -->
       <div class="row g-3">
         <!-- Office -->
         <div class="col-12 col-md-6">
@@ -417,8 +456,8 @@
         </div>
       </div>
 
-      <!-- Map (now integrated smoothly) -->
-      <div class="map-section mt-3">
+      <!-- Map -->
+      <div class="map-section">
         <div class="info-card h-100">
           <div class="d-flex align-items-start">
             <div class="icon-box bg-primary-gradient flex-shrink-0 me-3">
@@ -439,10 +478,10 @@
       </div>
     </div>
 
-    <!-- ✅ Form: Wider on desktop -->
+    <!-- Form -->
     <div class="col-12 col-lg-6">
-      <div class="form-container h-100 d-flex flex-column">
-        <h3 class="section-title">Send a Message</h3>
+      <div class="form-container h-100 d-flex flex-column" data-scroll-zoom>
+        <h3 class="section-title" data-scroll-fade>Send a Message</h3>
         <p class="intro-text">Fill out the form and we'll get back to you promptly.</p>
 
         <form method="POST" class="needs-validation flex-grow-1 d-flex flex-column" novalidate autocomplete="on">
@@ -496,18 +535,64 @@
     </div>
   </div>
 </div>
-<!-- Bootstrap Form Validation -->
+
+<!-- ✅ Scroll Animation + Form Validation -->
 <script>
   (function() {
     'use strict';
-    window.addEventListener('load', function() {
+
+    // ===== Scroll Animation (IntersectionObserver) =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const target = entry.target;
+          target.classList.add('scroll-in');
+          
+          // Stagger for info cards (only for .info-card)
+          if (target.classList.contains('info-card')) {
+            const cards = Array.from(document.querySelectorAll('.info-card'));
+            const index = cards.indexOf(target);
+            if (index !== -1) {
+              const staggerLevel = (index % 4) + 1; // 1→4 cycle
+              target.setAttribute('data-scroll-stagger', staggerLevel);
+              target.setAttribute('data-scroll-slide', '');
+            }
+          }
+          observer.unobserve(target);
+        }
+      });
+    }, {
+      rootMargin: '0px',
+      threshold: 0.1
+    });
+
+    // Observe elements
+    document.querySelectorAll('[data-scroll-fade]').forEach(el => {
+      // Fade: title + breadcrumbs
+      if (!el.classList.contains('scroll-in')) observer.observe(el);
+    });
+
+    document.querySelectorAll('.info-card, .map-placeholder, .privacy-alert').forEach(el => {
+      if (!el.classList.contains('scroll-in')) {
+        el.setAttribute('data-scroll-slide', '');
+        observer.observe(el);
+      }
+    });
+
+    const formContainer = document.querySelector('.form-container');
+    if (formContainer && !formContainer.classList.contains('scroll-in')) {
+      formContainer.setAttribute('data-scroll-zoom', '');
+      observer.observe(formContainer);
+    }
+
+    // ===== Form Validation (unchanged) =====
+    window.addEventListener('load', () => {
       const forms = document.querySelectorAll('.needs-validation');
       forms.forEach(form => {
-        form.addEventListener('submit', function(event) {
+        form.addEventListener('submit', event => {
           if (!form.checkValidity()) {
             event.preventDefault();
             event.stopPropagation();
-            // Scroll to first invalid field
             const firstInvalid = form.querySelector(':invalid');
             if (firstInvalid) {
               firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -517,7 +602,7 @@
           form.classList.add('was-validated');
         }, false);
       });
-    }, false);
+    });
   })();
 </script>
 
